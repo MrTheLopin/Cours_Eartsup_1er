@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 760">
+<defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#292c30"/></pattern><filter id="s"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-opacity=".35"/></filter></defs>
+<rect width="1700" height="760" fill="#17191b"/><rect width="1700" height="760" fill="url(#grid)"/>
+<text x="55" y="62" fill="#f3eee4" font-family="Arial" font-size="38" font-weight="700">Blueprint — Ramasser une pièce</text>
+<text x="55" y="95" fill="#aaa" font-family="Arial" font-size="20">Détecter le joueur → vérifier la condition → accéder au GameMode → ajouter une pièce → détruire la pièce.</text>
+
+<!-- Comment box -->
+<rect x="45" y="135" width="790" height="520" rx="14" fill="#191b1d" stroke="#4a4d50"/>
+<rect x="45" y="135" width="790" height="48" rx="14" fill="#45484c"/>
+<text x="70" y="168" fill="#fff" font-family="Arial" font-size="23" font-weight="700">Player Character Overlap</text>
+
+<!-- Nodes -->
+<g filter="url(#s)">
+<rect x="80" y="225" width="285" height="190" rx="12" fill="#151719" stroke="#a33" stroke-width="3"/><rect x="80" y="225" width="285" height="43" rx="12" fill="#9e2929"/>
+<text x="100" y="254" fill="#fff" font-family="Arial" font-size="17" font-weight="700">On Component Begin Overlap</text>
+<text x="105" y="305" fill="#ddd" font-family="Arial" font-size="16">Other Actor</text><circle cx="350" cy="300" r="8" fill="#20a9e0"/>
+<text x="105" y="345" fill="#ddd" font-family="Arial" font-size="16">Other Comp</text><circle cx="350" cy="340" r="8" fill="#20a9e0"/>
+<text x="105" y="385" fill="#ddd" font-family="Arial" font-size="16">Sweep Result</text><circle cx="350" cy="380" r="8" fill="#20a9e0"/>
+
+<rect x="95" y="500" width="245" height="75" rx="12" fill="#18231b" stroke="#5aa06b" stroke-width="2"/><text x="120" y="533" fill="#bde8c5" font-family="Arial" font-size="18" font-weight="700">Get Player Character</text><text x="120" y="560" fill="#ddd" font-family="Arial" font-size="15">Player Index 0</text><circle cx="325" cy="550" r="8" fill="#20a9e0"/>
+<rect x="405" y="300" width="145" height="90" rx="12" fill="#222529" stroke="#555"/><text x="478" y="354" text-anchor="middle" fill="#ddd" font-family="Arial" font-size="34" font-weight="700">==</text><circle cx="415" cy="325" r="8" fill="#20a9e0"/><circle cx="415" cy="370" r="8" fill="#20a9e0"/><circle cx="540" cy="348" r="8" fill="#e33"/>
+<rect x="600" y="275" width="160" height="120" rx="12" fill="#222529" stroke="#666"/><text x="620" y="310" fill="#ddd" font-family="Arial" font-size="22" font-weight="700">Branch</text><text x="620" y="350" fill="#ddd" font-family="Arial" font-size="15">Condition</text><circle cx="610" cy="350" r="8" fill="#e33"/><text x="710" y="338" fill="#ddd" font-family="Arial" font-size="15">True</text><circle cx="750" cy="335" r="8" fill="#fff"/>
+<rect x="610" y="455" width="175" height="80" rx="12" fill="#18231b" stroke="#5aa06b" stroke-width="2"/><text x="630" y="490" fill="#bde8c5" font-family="Arial" font-size="18" font-weight="700">Get Game Mode</text><text x="630" y="518" fill="#ddd" font-family="Arial" font-size="15">Return Value</text><circle cx="770" cy="510" r="8" fill="#20a9e0"/>
+
+<rect x="880" y="275" width="300" height="125" rx="12" fill="#17232b" stroke="#4089bd" stroke-width="2"/><text x="905" y="310" fill="#fff" font-family="Arial" font-size="18" font-weight="700">Cast To BP_ThirdPersonGameMode</text><text x="905" y="350" fill="#ddd" font-family="Arial" font-size="15">Object</text><circle cx="890" cy="350" r="8" fill="#20a9e0"/><text x="905" y="380" fill="#ddd" font-family="Arial" font-size="15">As BP Third Person Game Mode</text><circle cx="1165" cy="380" r="8" fill="#20a9e0"/>
+
+<rect x="1225" y="300" width="250" height="110" rx="12" fill="#17232b" stroke="#4089bd" stroke-width="2"/><text x="1250" y="335" fill="#fff" font-family="Arial" font-size="20" font-weight="700">Increase Coin</text><text x="1250" y="365" fill="#aaa" font-family="Arial" font-size="14">Target = GameMode</text><circle cx="1235" cy="380" r="8" fill="#20a9e0"/>
+<rect x="1505" y="300" width="145" height="90" rx="12" fill="#17232b" stroke="#4089bd" stroke-width="2"/><text x="1525" y="338" fill="#fff" font-family="Arial" font-size="18" font-weight="700">Destroy Actor</text><text x="1525" y="365" fill="#aaa" font-family="Arial" font-size="14">Target: self</text>
+</g>
+
+<!-- wires -->
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M365 245 C470 245 520 330 600 330" stroke="#fff" stroke-width="4"/>
+<path d="M350 300 C380 300 380 325 415 325" stroke="#20a9e0" stroke-width="4"/>
+<path d="M325 550 C360 550 365 370 415 370" stroke="#20a9e0" stroke-width="4"/>
+<path d="M550 348 H600" stroke="#e33" stroke-width="4"/>
+<path d="M760 335 H880" stroke="#fff" stroke-width="4"/>
+<path d="M770 510 C810 510 820 350 880 350" stroke="#20a9e0" stroke-width="4"/>
+<path d="M1180 335 H1225" stroke="#fff" stroke-width="4"/>
+<path d="M1165 380 C1200 380 1200 380 1225 380" stroke="#20a9e0" stroke-width="4"/>
+<path d="M1475 335 H1505" stroke="#fff" stroke-width="4"/>
+</g>
+<g fill="#fff"><path d="M600 330l-13-8v16z"/><path d="M880 335l-13-8v16z"/><path d="M1225 335l-13-8v16z"/><path d="M1505 335l-13-8v16z"/></g>
+
+<rect x="870" y="500" width="780" height="145" rx="15" fill="#121416" stroke="#45484c"/>
+<text x="895" y="535" fill="#f3eee4" font-family="Arial" font-size="23" font-weight="700">À retenir</text>
+<text x="895" y="572" fill="#ddd" font-family="Arial" font-size="18">1. Overlap détecte l'acteur → 2. == vérifie que c'est le joueur → 3. Branch valide la condition.</text>
+<text x="895" y="605" fill="#ddd" font-family="Arial" font-size="18">4. Get GameMode → 5. Cast → 6. Increase Coin → 7. Destroy Actor.</text>
+</svg>
