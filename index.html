@@ -1,54 +1,10 @@
 <!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Guide Blender — cours E-artsup">
-  <title>Blender — Guide E-artsup</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Grand résumé de cours E-artsup"><title>Cours E-artsup — 1er</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<header class="hero">
-  <nav class="nav"><a class="brand" href="#">BLENDER<span>•</span>GUIDE</a><a href="#raccourcis">Raccourcis</a><a href="#interface">Interface</a><a href="#proprietes">Propriétés</a><a href="#editeurs">Éditeurs</a></nav>
-  <div class="hero-grid">
-    <div><div class="eyebrow">E-ARTSUP · 1ER</div><h1>Guide Blender</h1><p>Une fiche de référence rapide pour comprendre l’interface, les propriétés, les éditeurs et les raccourcis essentiels.</p><a class="button" href="#raccourcis">Commencer →</a></div>
-    <div class="blender-card"><div class="cube"></div><div><strong>Blender</strong><small>3D · Modélisation · Shading · Animation · Render</small></div></div>
-  </div>
-</header>
-
+<header class="hero"><nav class="nav"><a class="brand" href="index.html">COURS<span>•</span>EARTSUP</a><a href="#matieres">Matières</a><a href="#organisation">Organisation</a></nav>
+<div class="hero-grid"><div><div class="eyebrow">E-ARTSUP · 1ER</div><h1>Grand résumé de cours</h1><p>Un espace central pour regrouper toutes mes matières, mes notes, mes méthodes et mes fiches de révision.</p><a class="button" href="#matieres">Voir les matières →</a></div><div class="blender-card"><div class="cube"></div><div><strong>12 matières</strong><small>Une page indépendante pour chaque cours</small></div></div></div></header>
 <main>
-<section id="interface" class="section"><div class="section-head"><span>01</span><h2>Interface — les 4 îlots</h2></div>
-<div class="islands">
-  <article><b>01</b><h3>Objets</h3><p>Vue 3D, sélection, déplacement et manipulation des objets.</p><code>G · S · R · Tab</code></article>
-  <article><b>02</b><h3>Propriétés</h3><p>Transform, Modifiers, Physics, Animation, Data et Material.</p><code>Object → Properties</code></article>
-  <article><b>03</b><h3>Éditeurs</h3><p>UV Editor et Shader Editor pour les textures et matériaux.</p><code>UV · Shader</code></article>
-  <article><b>04</b><h3>Préférences</h3><p>Réglages de Blender et gestion des add-ons.</p><code>Edit → Preferences</code></article>
-</div></section>
-
-<section id="proprietes" class="section dark"><div class="section-head"><span>02</span><h2>Propriétés de l’objet</h2></div>
-<div class="cards">
-<article class="card"><div class="tag">1</div><h3>Object</h3><p>Transformations et informations générales de l’objet.</p><ul><li>Location</li><li>Rotation</li><li>Scale</li><li>Dimensions</li></ul></article>
-<article class="card"><div class="tag">2</div><h3>Modifier</h3><p>Une série d’opérations appliquées à l’objet, de façon non destructive.</p><ul><li>Subdivision</li><li>Bevel</li><li>Array</li><li>À compléter</li></ul></article>
-<article class="card"><div class="tag">3</div><h3>Material</h3><p>Création et réglage des matériaux utilisés par l’objet.</p><ul><li>Base Color</li><li>Roughness</li><li>Metallic</li><li>Shader Editor</li></ul></article>
-<article class="card"><div class="tag">4</div><h3>Data</h3><p>Données propres au type d’objet sélectionné.</p><ul><li>Mesh data</li><li>UV Maps</li><li>Vertex groups</li><li>À compléter</li></ul></article>
-<article class="card"><div class="tag">5</div><h3>Physics</h3><p>Simulation pour certaines situations.</p><ul><li>Rigid Body</li><li>Collision</li><li>Cloth</li><li>À compléter</li></ul></article>
-<article class="card"><div class="tag">6</div><h3>Animation</h3><p>Outils liés aux images clés et à l’animation des propriétés.</p><ul><li>Keyframes</li><li>Timeline</li><li>Dope Sheet</li><li>À compléter</li></ul></article>
-</div>
-<div class="render"><div><span class="tag">RENDER</span><h3>Pipeline de rendu — Cycles</h3><p>Cycles est le moteur de rendu physique de Blender. Le pipeline peut être résumé ainsi : <strong>modéliser → matériaux → éclairage → caméra → réglages Cycles → rendu</strong>.</p></div><div class="flow"><span>OBJET</span><i>→</i><span>MATÉRIAU</span><i>→</i><span>LUMIÈRE</span><i>→</i><span>CAMÉRA</span><i>→</i><span>RENDER</span></div></div>
-</section>
-
-<section id="editeurs" class="section"><div class="section-head"><span>03</span><h2>Éditeurs</h2></div>
-<div class="editor-grid"><article><div class="editor-art uv"><span>UV</span></div><h3>UV Editor</h3><p>Déplier les faces d’un mesh et organiser les UV pour préparer une texture.</p></article><article><div class="editor-art shader"><span>SHADER</span></div><h3>Shader Editor</h3><p>Construire les matériaux avec des nœuds : textures, Principled BSDF et sortie matériau.</p></article></div>
-</section>
-
-<section id="raccourcis" class="section shortcuts"><div class="section-head"><span>04</span><h2>Raccourcis essentiels</h2></div>
-<div class="search"><input id="search" type="search" placeholder="Rechercher un raccourci…"><span>⌕</span></div>
-<div id="shortcut-list" class="shortcut-list">
-<div class="shortcut"><kbd>G</kbd><span>Déplacer l’objet</span></div><div class="shortcut"><kbd>G + X</kbd><span>Déplacer sur l’axe X</span></div><div class="shortcut"><kbd>G + Y</kbd><span>Déplacer sur l’axe Y</span></div><div class="shortcut"><kbd>G + Z</kbd><span>Déplacer sur l’axe Z</span></div><div class="shortcut"><kbd>S</kbd><span>Modifier la taille (Scale)</span></div><div class="shortcut"><kbd>R</kbd><span>Rotation</span></div><div class="shortcut"><kbd>Shift + A</kbd><span>Ouvrir le menu Ajouter</span></div><div class="shortcut"><kbd>X</kbd><span>Supprimer l’objet</span></div><div class="shortcut"><kbd>Tab</kbd><span>Changer de mode</span></div><div class="shortcut"><kbd>W</kbd><span>Changer le mode de sélection</span></div><div class="shortcut"><kbd>Shift + C</kbd><span>Recentrer la vue et le 3D Cursor</span></div><div class="shortcut"><kbd>T</kbd><span>Afficher / masquer la Toolbar</span></div><div class="shortcut"><kbd>N</kbd><span>Afficher / masquer le panneau Transform</span></div><div class="shortcut"><kbd>Shift + MMB</kbd><span>Déplacer la vue horizontalement / verticalement</span></div><div class="shortcut"><kbd>Clic sur Scene Collection + .</kbd><span>Cadrer / rediriger la vue sur l’objet sélectionné</span></div><div class="shortcut"><kbd>Ctrl + R</kbd><span>Ajouter une boucle de découpe (Loop Cut)</span></div><div class="shortcut"><kbd>Alt + H</kbd><span>Afficher les meshes cachés</span></div><div class="shortcut"><kbd>L</kbd><span>Sélectionner le mesh sous le curseur</span></div><div class="shortcut"><kbd>G + clic molette</kbd><span>Snaper / contraindre selon le geste</span></div><div class="shortcut"><kbd>Ctrl + Alt + Z</kbd><span>Annuler / revenir en arrière</span></div><div class="shortcut"><kbd>Object → Set Origin → Origin to Geometry</kbd><span>Placer l’origine au centre de la géométrie</span></div>
-</div></section>
-
-<section class="section tips"><div class="section-head"><span>05</span><h2>À retenir</h2></div><div class="tips-grid"><div><strong>Transform par défaut</strong><p>Rotation : <code>0°</code> · Scale : <code>1</code> · Les dimensions dépendent de l’objet.</p></div><div><strong>Navigation</strong><p>La molette, le clic molette et les combinaisons avec Shift/Ctrl permettent de naviguer dans la vue.</p></div><div><strong>LoopTools</strong><p>Add-on utile pour enrichir les outils de modélisation. À activer depuis Preferences → Add-ons.</p></div><div><strong>Network</strong><p>Edit → Preferences → Network → <b>Allow Online Access</b>, si nécessaire pour les fonctions en ligne.</p></div></div></section>
-</main>
-<footer><span>BLENDER GUIDE · E-ARTSUP</span><span>Version de travail — contenu à enrichir</span></footer>
-<script src="script.js"></script>
+<section id="matieres" class="section"><div class="section-head"><span>01</span><h2>Toutes les matières</h2></div><div class="cards course-grid"><a class="card course-card" href="couleur-perception.html"><div class="tag">01</div><div><small>COULEUR</small><h3>Couleur & Perception</h3><p>Perception, théorie des couleurs et références.</p></div><span class="arrow">→</span></a><a class="card course-card" href="dessin-conception.html"><div class="tag">02</div><div><small>DESSIN</small><h3>Dessin & Conception</h3><p>Observation, construction et conception graphique.</p></div><span class="arrow">→</span></a><a class="card course-card" href="game-design.html"><div class="tag">03</div><div><small>GAME</small><h3>Game Design</h3><p>Mécaniques, règles et expérience joueur.</p></div><span class="arrow">→</span></a><a class="card course-card" href="popculture.html"><div class="tag">04</div><div><small>POP</small><h3>PoP Culture</h3><p>Références culturelles et œuvres.</p></div><span class="arrow">→</span></a><a class="card course-card" href="presenter-convaincre.html"><div class="tag">05</div><div><small>PITCH</small><h3>Présenter & Convaincre</h3><p>Structurer et défendre un projet.</p></div><span class="arrow">→</span></a><a class="card course-card" href="production-3d.html"><div class="tag">06</div><div><small>3D</small><h3>Production 3D</h3><p>Blender, modélisation, shading, animation et rendu.</p></div><span class="arrow">→</span></a><a class="card course-card" href="production-image.html"><div class="tag">07</div><div><small>IMAGE</small><h3>Production d'image</h3><p>Techniques et workflow de production d'images.</p></div><span class="arrow">→</span></a><a class="card course-card" href="specialite-game.html"><div class="tag">08</div><div><small>GAME</small><h3>Spécialité Game</h3><p>Cours et projets de spécialité.</p></div><span class="arrow">→</span></a><a class="card course-card" href="studio-mobile.html"><div class="tag">09</div><div><small>MOBILE</small><h3>Studio Mobile</h3><p>Travaux et méthodes du studio Mobile.</p></div><span class="arrow">→</span></a><a class="card course-card" href="studio-univers.html"><div class="tag">10</div><div><small>UNIVERS</small><h3>Studio Univers</h3><p>Travaux et recherches du studio Univers.</p></div><span class="arrow">→</span></a><a class="card course-card" href="unreal.html"><div class="tag">11</div><div><small>UNREAL</small><h3>Unreal</h3><p>Outils et workflows avec Unreal Engine.</p></div><span class="arrow">→</span></a><a class="card course-card" href="volume-representation.html"><div class="tag">12</div><div><small>VOLUME</small><h3>Volume & Représentation</h3><p>Volume, espace et représentation en 3D.</p></div><span class="arrow">→</span></a></div></section>
+<section id="organisation" class="section dark"><div class="section-head"><span>02</span><h2>Organisation du site</h2></div><div class="tips-grid"><div><strong>Une matière = une page</strong><p>Chaque cours possède sa propre page pour éviter de mélanger les informations.</p></div><div><strong>Résumé</strong><p>Les notions importantes, définitions et méthodes seront condensées dans chaque fiche.</p></div><div><strong>Révision</strong><p>Les raccourcis, points à retenir et exemples pourront être ajoutés progressivement.</p></div><div><strong>Production 3D</strong><p>Le guide Blender existant est maintenant intégré à la page Production 3D.</p></div></div></section>
+</main><footer><span>COURS E-ARTSUP · 1ER</span><span>Base de travail — contenu à enrichir</span></footer>
 </body></html>
