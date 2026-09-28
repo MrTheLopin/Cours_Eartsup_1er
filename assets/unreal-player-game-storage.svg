@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#111315"/><stop offset="1" stop-color="#08090a"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".35"/></filter></defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<g fill="#f3eee4" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="36"><text x="170" y="75">Player</text><text x="760" y="75">Game</text><text x="1280" y="75">Storage</text></g>
+<g stroke="#53606c" stroke-width="2"><path d="M90 100H520M650 100H1050M1180 100H1510"/></g>
+<g font-family="Arial,Helvetica,sans-serif" text-anchor="middle" filter="url(#shadow)">
+<g fill="#2f6df6"><circle cx="300" cy="165" r="55"/><path d="M230 265c0-48 31-75 70-75s70 27 70 75z"/></g><text x="300" y="245" fill="#111" font-size="24">User</text>
+<rect x="175" y="305" width="250" height="105" rx="18" fill="#f0df67"/><text x="300" y="342" fill="#151515" font-size="21" font-weight="700">Player Subsystem</text><text x="300" y="371" fill="#151515" font-size="18">Mapping Context</text><text x="300" y="394" fill="#151515" font-size="18">(Input Actions)</text>
+<rect x="160" y="465" width="280" height="115" rx="18" fill="#438de8"/><text x="300" y="510" fill="#fff" font-size="25" font-weight="700">Player</text><text x="300" y="543" fill="#fff" font-size="25" font-weight="700">Controller</text>
+<rect x="225" y="615" width="150" height="55" rx="18" fill="#9568e8"/><text x="300" y="651" fill="#fff" font-size="21" font-weight="700">Possess</text>
+<rect x="170" y="715" width="260" height="85" rx="18" fill="#438de8"/><text x="300" y="768" fill="#fff" font-size="25" font-weight="700">Character</text>
+<rect x="650" y="465" width="330" height="115" rx="18" fill="#438de8"/><text x="815" y="535" fill="#fff" font-size="28" font-weight="700">GameMode</text>
+<rect x="1200" y="465" width="300" height="90" rx="18" fill="#9a5be0"/><text x="1350" y="520" fill="#fff" font-size="26" font-weight="700">SaveGame</text>
+<rect x="1200" y="590" width="300" height="90" rx="18" fill="#ed9639"/><text x="1350" y="645" fill="#fff" font-size="26" font-weight="700">GameInstance</text>
+</g>
+<g fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M300 220V305"/><path d="M300 410V465"/><path d="M300 580V615"/><path d="M300 670V715"/>
+<path d="M440 520H650"/><path d="M430 757L650 560"/>
+</g>
+<g fill="#fff"><path d="M300 305l-13-20h26z"/><path d="M300 465l-13-20h26z"/><path d="M300 615l-13-20h26z"/><path d="M300 715l-13-20h26z"/><path d="M650 520l-20-13v26z"/><path d="M650 560l-22-3 12 20z"/></g>
+<text x="800" y="855" text-anchor="middle" fill="#f3eee4" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700">Chaque LVL a son propre Player Controller et GameMode</text>
+</svg>
