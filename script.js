@@ -1,0 +1,1 @@
+const input=document.querySelector("#search");const items=[...document.querySelectorAll(".shortcut")];input.addEventListener("input",()=>{const q=input.value.toLowerCase().trim();items.forEach(i=>{i.style.display=i.textContent.toLowerCase().includes(q)?"flex":"none"})});
