@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 900">
+<defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#292c30" stroke-width="1"/></pattern><filter id="s"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-opacity=".35"/></filter></defs>
+<rect width="1500" height="900" fill="#17191b"/><rect width="1500" height="900" fill="url(#grid)"/>
+<text x="55" y="65" fill="#f3eee4" font-family="Arial" font-size="38" font-weight="700">Blueprint — Increase Coin &amp; affichage</text>
+<text x="55" y="98" fill="#aaa" font-family="Arial" font-size="20">Modifier une variable puis convertir sa valeur en texte pour l'afficher avec Print String.</text>
+
+<!-- Increase Coin -->
+<g filter="url(#s)">
+<rect x="75" y="180" width="220" height="92" rx="12" fill="#16181a" stroke="#a33" stroke-width="3"/><rect x="75" y="180" width="220" height="38" rx="12" fill="#a52b2b"/>
+<text x="90" y="207" fill="#fff" font-family="Arial" font-size="18" font-weight="700">Increase Coin</text><text x="90" y="246" fill="#ddd" font-family="Arial" font-size="16">Custom Event</text>
+<rect x="355" y="205" width="150" height="58" rx="10" fill="#222529" stroke="#555"/><text x="430" y="244" text-anchor="middle" fill="#eee" font-family="Arial" font-size="34" font-weight="700">+</text>
+<rect x="565" y="180" width="245" height="92" rx="12" fill="#1c2723" stroke="#6eaa9c" stroke-width="2"/><text x="590" y="210" fill="#ddd" font-family="Arial" font-size="17" font-weight="700">SET</text><text x="590" y="244" fill="#fff" font-family="Arial" font-size="18">Player Coins</text>
+</g>
+<rect x="95" y="355" width="205" height="52" rx="25" fill="#1e2426" stroke="#5c7772"/><circle cx="285" cy="381" r="8" fill="#20d3ad"/><text x="115" y="387" fill="#fff" font-family="Arial" font-size="17">Player Coins</text>
+<path d="M295 226H355" stroke="#fff" stroke-width="4"/><path d="M505 234H565" stroke="#20d3ad" stroke-width="4"/><path d="M285 381C330 381 325 234 355 234" fill="none" stroke="#20d3ad" stroke-width="4"/><path d="M505 234C530 234 535 226 565 226" fill="none" stroke="#20d3ad" stroke-width="4"/>
+<path d="M295 226l-12-8v16zM355 234l-12-8v16zM565 226l-12-8v16z" fill="#fff"/>
+
+<!-- Print String -->
+<g filter="url(#s)">
+<rect x="300" y="500" width="180" height="95" rx="12" fill="#16181a" stroke="#a33" stroke-width="3"/><rect x="300" y="500" width="180" height="38" rx="12" fill="#a52b2b"/>
+<text x="320" y="526" fill="#fff" font-family="Arial" font-size="18" font-weight="700">Event Tick</text><text x="320" y="568" fill="#ddd" font-family="Arial" font-size="16">Delta Seconds</text>
+<rect x="555" y="535" width="175" height="55" rx="10" fill="#222529" stroke="#555"/><text x="642" y="570" text-anchor="middle" fill="#ddd" font-family="Arial" font-size="17">To String</text>
+<rect x="820" y="455" width="355" height="235" rx="14" fill="#17232b" stroke="#4089bd" stroke-width="2"/><text x="850" y="492" fill="#fff" font-family="Arial" font-size="22" font-weight="700">Print String</text><text x="850" y="530" fill="#ddd" font-family="Arial" font-size="17">In String</text><text x="1040" y="530" fill="#eee" font-family="Arial" font-size="17">Player Coins</text><text x="850" y="570" fill="#ddd" font-family="Arial" font-size="16">✓ Print to Screen</text><text x="850" y="605" fill="#ddd" font-family="Arial" font-size="16">✓ Print to Log</text><text x="850" y="640" fill="#ddd" font-family="Arial" font-size="16">Duration</text>
+<circle cx="830" cy="530" r="8" fill="#d43acb"/><circle cx="480" cy="548" r="8" fill="#fff"/><circle cx="730" cy="548" r="8" fill="#d43acb"/>
+</g>
+<circle cx="480" cy="548" r="8" fill="#fff"/><path d="M480 548H555" stroke="#fff" stroke-width="4"/><path d="M730 562C770 562 775 530 820 530" fill="none" stroke="#d43acb" stroke-width="4"/><path d="M480 548l-12-8v16zM555 548l-12-8v16zM820 530l-12-8v16z" fill="#fff"/>
+
+<!-- Notes -->
+<rect x="55" y="735" width="1390" height="115" rx="15" fill="#121416" stroke="#45484c"/>
+<text x="80" y="770" fill="#f3eee4" font-family="Arial" font-size="23" font-weight="700">À retenir</text>
+<text x="80" y="808" fill="#ddd" font-family="Arial" font-size="18">Increase Coin : Player Coins → +1 → Set Player Coins</text>
+<text x="80" y="835" fill="#ddd" font-family="Arial" font-size="18">Affichage : Event Tick → convertir Player Coins en texte → Print String</text>
+</svg>
