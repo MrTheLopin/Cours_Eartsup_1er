@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Guide Blender — cours E-artsup">
+  <title>Blender — Guide E-artsup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <nav class="nav"><a class="brand" href="#">BLENDER<span>•</span>GUIDE</a><a href="#raccourcis">Raccourcis</a><a href="#interface">Interface</a><a href="#proprietes">Propriétés</a><a href="#editeurs">Éditeurs</a></nav>
+  <div class="hero-grid">
+    <div><div class="eyebrow">E-ARTSUP · 1ER</div><h1>Guide Blender</h1><p>Une fiche de référence rapide pour comprendre l’interface, les propriétés, les éditeurs et les raccourcis essentiels.</p><a class="button" href="#raccourcis">Commencer →</a></div>
+    <div class="blender-card"><div class="cube"></div><div><strong>Blender</strong><small>3D · Modélisation · Shading · Animation · Render</small></div></div>
+  </div>
+</header>
+
+<main>
+<section id="interface" class="section"><div class="section-head"><span>01</span><h2>Interface — les 4 îlots</h2></div>
+<div class="islands">
+  <article><b>01</b><h3>Objets</h3><p>Vue 3D, sélection, déplacement et manipulation des objets.</p><code>G · S · R · Tab</code></article>
+  <article><b>02</b><h3>Propriétés</h3><p>Transform, Modifiers, Physics, Animation, Data et Material.</p><code>Object → Properties</code></article>
+  <article><b>03</b><h3>Éditeurs</h3><p>UV Editor et Shader Editor pour les textures et matériaux.</p><code>UV · Shader</code></article>
+  <article><b>04</b><h3>Préférences</h3><p>Réglages de Blender et gestion des add-ons.</p><code>Edit → Preferences</code></article>
+</div></section>
+
+<section id="proprietes" class="section dark"><div class="section-head"><span>02</span><h2>Propriétés de l’objet</h2></div>
+<div class="cards">
+<article class="card"><div class="tag">1</div><h3>Object</h3><p>Transformations et informations générales de l’objet.</p><ul><li>Location</li><li>Rotation</li><li>Scale</li><li>Dimensions</li></ul></article>
+<article class="card"><div class="tag">2</div><h3>Modifier</h3><p>Une série d’opérations appliquées à l’objet, de façon non destructive.</p><ul><li>Subdivision</li><li>Bevel</li><li>Array</li><li>À compléter</li></ul></article>
+<article class="card"><div class="tag">3</div><h3>Material</h3><p>Création et réglage des matériaux utilisés par l’objet.</p><ul><li>Base Color</li><li>Roughness</li><li>Metallic</li><li>Shader Editor</li></ul></article>
+<article class="card"><div class="tag">4</div><h3>Data</h3><p>Données propres au type d’objet sélectionné.</p><ul><li>Mesh data</li><li>UV Maps</li><li>Vertex groups</li><li>À compléter</li></ul></article>
+<article class="card"><div class="tag">5</div><h3>Physics</h3><p>Simulation pour certaines situations.</p><ul><li>Rigid Body</li><li>Collision</li><li>Cloth</li><li>À compléter</li></ul></article>
+<article class="card"><div class="tag">6</div><h3>Animation</h3><p>Outils liés aux images clés et à l’animation des propriétés.</p><ul><li>Keyframes</li><li>Timeline</li><li>Dope Sheet</li><li>À compléter</li></ul></article>
+</div>
+<div class="render"><div><span class="tag">RENDER</span><h3>Pipeline de rendu — Cycles</h3><p>Cycles est le moteur de rendu physique de Blender. Le pipeline peut être résumé ainsi : <strong>modéliser → matériaux → éclairage → caméra → réglages Cycles → rendu</strong>.</p></div><div class="flow"><span>OBJET</span><i>→</i><span>MATÉRIAU</span><i>→</i><span>LUMIÈRE</span><i>→</i><span>CAMÉRA</span><i>→</i><span>RENDER</span></div></div>
+</section>
+
+<section id="editeurs" class="section"><div class="section-head"><span>03</span><h2>Éditeurs</h2></div>
+<div class="editor-grid"><article><div class="editor-art uv"><span>UV</span></div><h3>UV Editor</h3><p>Déplier les faces d’un mesh et organiser les UV pour préparer une texture.</p></article><article><div class="editor-art shader"><span>SHADER</span></div><h3>Shader Editor</h3><p>Construire les matériaux avec des nœuds : textures, Principled BSDF et sortie matériau.</p></article></div>
+</section>
+
+<section id="raccourcis" class="section shortcuts"><div class="section-head"><span>04</span><h2>Raccourcis essentiels</h2></div>
+<div class="search"><input id="search" type="search" placeholder="Rechercher un raccourci…"><span>⌕</span></div>
+<div id="shortcut-list" class="shortcut-list">
+<div class="shortcut"><kbd>G</kbd><span>Déplacer l’objet</span></div><div class="shortcut"><kbd>G + X</kbd><span>Déplacer sur l’axe X</span></div><div class="shortcut"><kbd>G + Y</kbd><span>Déplacer sur l’axe Y</span></div><div class="shortcut"><kbd>G + Z</kbd><span>Déplacer sur l’axe Z</span></div><div class="shortcut"><kbd>S</kbd><span>Modifier la taille (Scale)</span></div><div class="shortcut"><kbd>R</kbd><span>Rotation</span></div><div class="shortcut"><kbd>Shift + A</kbd><span>Ouvrir le menu Ajouter</span></div><div class="shortcut"><kbd>X</kbd><span>Supprimer l’objet</span></div><div class="shortcut"><kbd>Tab</kbd><span>Changer de mode</span></div><div class="shortcut"><kbd>W</kbd><span>Changer le mode de sélection</span></div><div class="shortcut"><kbd>Shift + C</kbd><span>Recentrer la vue et le 3D Cursor</span></div><div class="shortcut"><kbd>T</kbd><span>Afficher / masquer la Toolbar</span></div><div class="shortcut"><kbd>N</kbd><span>Afficher / masquer le panneau Transform</span></div><div class="shortcut"><kbd>Shift + MMB</kbd><span>Déplacer la vue horizontalement / verticalement</span></div><div class="shortcut"><kbd>Clic sur Scene Collection + .</kbd><span>Cadrer / rediriger la vue sur l’objet sélectionné</span></div>
+</div></section>
+
+<section class="section tips"><div class="section-head"><span>05</span><h2>À retenir</h2></div><div class="tips-grid"><div><strong>Transform par défaut</strong><p>Rotation : <code>0°</code> · Scale : <code>1</code> · Les dimensions dépendent de l’objet.</p></div><div><strong>Navigation</strong><p>La molette, le clic molette et les combinaisons avec Shift/Ctrl permettent de naviguer dans la vue.</p></div><div><strong>LoopTools</strong><p>Add-on utile pour enrichir les outils de modélisation. À activer depuis Preferences → Add-ons.</p></div><div><strong>Network</strong><p>Edit → Preferences → Network → <b>Allow Online Access</b>, si nécessaire pour les fonctions en ligne.</p></div></div></section>
+</main>
+<footer><span>BLENDER GUIDE · E-ARTSUP</span><span>Version de travail — contenu à enrichir</span></footer>
+<script src="script.js"></script>
+</body></html>
