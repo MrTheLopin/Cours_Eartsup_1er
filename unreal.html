@@ -135,20 +135,14 @@
 </div>
 
 <div class="blueprint-item">
-<h3>04 · Event Blueprint Update Animation — calculer la vitesse</h3>
-<p><span class="highlight">Event Blueprint Update Animation</span> sert à mettre à jour les variables de l'Animation Blueprint. Ici, on récupère la vitesse du personnage pour créer <code>Ground Speed</code>, puis cette variable pourra piloter l'axe <code>Speed</code> du Blend Space 1D.</p>
-<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-event-update-animation.svg" alt="Event Blueprint Update Animation : calcul de Ground Speed avec Try Get Pawn Owner, Get Velocity, Vector Length et Set" style="display:block;width:100%;height:auto"></div>
-<div class="course-steps">
-<div class="course-step"><div class="number">1</div><div><h3>Event Blueprint Update Animation</h3><p>Cet événement se déclenche régulièrement pendant l'animation et sert à mettre à jour les variables de l'Animation Blueprint.</p></div></div>
-<div class="course-step"><div class="number">2</div><div><h3>Try Get Pawn Owner</h3><p>Récupérer le <strong>Pawn / Character</strong> auquel l'Animation Blueprint est associé.</p></div></div>
-<div class="course-step"><div class="number">3</div><div><h3>Get Velocity</h3><p>Récupérer le vecteur de vitesse du personnage. La vitesse contient des composantes <code>X</code>, <code>Y</code> et <code>Z</code>.</p></div></div>
-<div class="course-step"><div class="number">4</div><div><h3>Vector Length</h3><p>Calculer la magnitude du vecteur pour obtenir une valeur numérique de vitesse.</p></div></div>
-<div class="course-step"><div class="number">5</div><div><h3>Set Ground Speed</h3><p>Stocker cette valeur dans une variable <span class="highlight">Float</span> appelée <code>Ground Speed</code>.</p></div></div>
+<h3>04 · Event Blueprint Update Animation — Ground Speed</h3>
+<p class="section-intro">Cette étape sert à récupérer la vitesse du personnage dans l’<strong>Animation Blueprint</strong> afin de l’utiliser ensuite comme entrée <code>Speed</code> du <span class="highlight">Blend Space 1D</span>.</p>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto">
+<img src="assets/unreal-event-update-animation.svg" alt="Schéma Event Blueprint Update Animation : Try Get Pawn Owner, Get Velocity, Vector Length et Set Ground Speed" style="display:block;width:100%;height:auto">
 </div>
-<div class="important"><strong>⭐ Lien avec le Blend Space :</strong> <code>Ground Speed</code> devient la valeur qui peut alimenter l'entrée <code>Speed</code> du <span class="highlight">Blend Space 1D</span>. Par exemple : <code>0</code> → Idle, vitesse intermédiaire → Walk, vitesse élevée → Run.</div>
-<div class="warning"><strong>⚠️ À retenir :</strong> <code>Velocity</code> est un vecteur ; <code>Vector Length</code> le transforme en une valeur de vitesse. La variable <code>Ground Speed</code> doit être de type <span class="highlight">Float</span>.</div>
+<div class="important"><strong>⭐ À retenir :</strong> <code>Update Animation → Try Get Pawn Owner → Get Velocity → Vector Length → Set Ground Speed</code>. La variable <code>Ground Speed</code> est un <span class="highlight">Float</span> qui pourra alimenter l’axe <code>Speed</code> du Blend Space 1D.</div>
+<div class="warning"><strong>⚠️ Mémo :</strong> <code>Velocity</code> est un vecteur ; <code>Vector Length</code> le convertit en valeur de vitesse. Exemple : <code>0</code> = Idle, vitesse intermédiaire = Walk, vitesse élevée = Run.</div>
 </div>
-
 </div>
 </section>
 
