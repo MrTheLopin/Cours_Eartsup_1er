@@ -222,6 +222,19 @@
 </div>
 </section>
 
+<div class="blueprint-item">
+<h3>Run — modifier la vitesse avec IA_Run</h3>
+<p class="section-intro">Cette logique utilise une <strong>Enhanced Input Action</strong> pour passer temporairement le <code>Max Walk Speed</code> de <code>150</code> à <code>600</code>, puis revenir à la vitesse normale lorsque l'action est relâchée.</p>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-run-max-walk-speed.svg" alt="Blueprint IA Run qui modifie Max Walk Speed de 150 à 600" style="display:block;width:100%;height:auto"></div>
+<div class="course-steps">
+<div class="course-step"><div class="number">1</div><div><h3>IA_Run — Started</h3><p>Lorsque l'action démarre, afficher <code>Run</code> puis définir <span class="highlight">Max Walk Speed = 600</span> sur <code>Character Movement</code>.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>IA_Run — Canceled / Completed</h3><p>Lorsque l'action s'arrête, afficher <code>Stop Run</code> puis remettre <span class="highlight">Max Walk Speed = 150</span>.</p></div></div>
+<div class="course-step"><div class="number">3</div><div><h3>Lien avec le Blend Space</h3><p>La valeur de vitesse maximale influence directement les valeurs de <code>Ground Speed</code>. Si ton Blend Space 1D utilise <code>Speed</code>, son axe doit être cohérent avec la vitesse maximale réellement utilisée.</p></div></div>
+</div>
+<div class="important"><strong>⭐ À retenir :</strong> <code>Character Movement → Max Walk Speed</code> contrôle la vitesse maximale de déplacement au sol. Ici, <code>150</code> = déplacement normal et <code>600</code> = course.</div>
+<div class="warning"><strong>⚠️ Attention :</strong> les valeurs <code>150</code> et <code>600</code> sont celles visibles sur ta capture. Elles sont donc des exemples de ton projet, pas des valeurs universelles d'Unreal.</div>
+</div>
+
 <section id="variables" class="section">
 <div class="section-head"><span>05</span><h2>Types de variables</h2></div>
 <p class="section-intro">Une variable stocke une valeur ou une référence. Unreal propose plusieurs types de données ; les principaux types sont identifiables visuellement dans les Blueprints.</p>
