@@ -1,73 +1,185 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Unreal — résumé de cours E-artsup"><title>Unreal — Cours E-artsup</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
-<body><header class="hero"><nav class="nav"><a class="brand" href="index.html">COURS<span>•</span>EARTSUP</a><a href="index.html">Accueil</a><a href="#cours">Cours</a><a href="#notes">Notes</a><a href="#fiche-visuelle">Fiche visuelle</a><a href="#snap">Snap</a><a href="#variables">Variables</a><a href="#raccourcis">Raccourcis</a><a href="#blueprints-2">Blueprints</a><a href="#naming">Naming</a></nav>
-<div class="hero-grid"><div><div class="eyebrow">E-ARTSUP · 1ER</div><h1>Unreal</h1><p>Cours, outils, workflows et notions autour d'Unreal Engine.</p></div><div class="blender-card"><div class="cube"></div><div><strong>UNREAL</strong><small>Fiche de cours · résumé · notions · ressources</small></div></div></div></header>
-<main><section id="cours" class="section"><div class="section-head"><span>01</span><h2>Résumé du cours</h2></div><div class="cards"><article class="card"><div class="tag">A</div><h3>Notions</h3><p>Les notions importantes seront regroupées ici au fur et à mesure de l'ajout de tes cours.</p></article><article class="card"><div class="tag">B</div><h3>Méthodes</h3><p>Les méthodes, étapes et workflows à retenir pourront être ajoutés sous forme de fiches courtes.</p></article><article class="card"><div class="tag">C</div><h3>À retenir</h3><p>Cette zone servira à condenser les définitions, règles, raccourcis et points importants.</p></article></div></section>
-<section id="notes" class="section dark"><div class="section-head"><span>02</span><h2>Notes de cours</h2></div><div class="tips-grid"><div><strong>Chapitre 01</strong><p>À compléter avec tes notes.</p></div><div><strong>Chapitre 02</strong><p>À compléter avec tes notes.</p></div><div><strong>Références</strong><p>À compléter avec les exemples, œuvres, outils ou ressources.</p></div><div><strong>Révision</strong><p>À compléter avec les points à mémoriser.</p></div></div></section><section id="fiche-visuelle" class="section"><div class="section-head"><span>01</span><h2>Fiche visuelle — Blueprint</h2></div><div class="exercise-card" style="overflow:auto"><svg viewBox="0 0 1400 780" role="img" aria-label="Schéma Unreal Blueprint expliquant un événement Overlap, la vérification du joueur, le Branch et le Print String" style="display:block;width:100%;min-width:900px;height:auto;background:#101214;border-radius:14px"><defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#24272b" stroke-width="1"/></pattern></defs><rect width="1400" height="780" fill="url(#grid)"/><text x="55" y="65" fill="#f3eee4" font-size="42" font-weight="700">Blueprint — Overlap + vérification du joueur</text><text x="55" y="98" fill="#aaa" font-size="20">Un événement déclenche la logique, puis un Branch décide si la condition est vraie.</text>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Unreal — fiche de cours E-artsup">
+<title>Unreal — Cours E-artsup</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header class="hero">
+<nav class="nav">
+<a class="brand" href="index.html">COURS<span>•</span>EARTSUP</a>
+<a href="index.html">Accueil</a><a href="#cours">Cours</a><a href="#blueprints">Blueprints</a><a href="#variables">Variables</a><a href="#naming">Naming</a><a href="#raccourcis">Raccourcis</a><a href="#ressources">Ressources</a>
+</nav>
+<div class="hero-grid">
+<div>
+<div class="eyebrow">E-ARTSUP · 1ER · FICHE DE RÉVISION</div>
+<h1>Unreal</h1>
+<p>Une fiche organisée pour retrouver rapidement les notions, workflows Blueprint, variables, raccourcis, Snap et conventions de nommage.</p>
+</div>
+<div class="blender-card"><div class="cube"></div><div><strong>UNREAL ENGINE</strong><small>Blueprint · Assets · Variables · Workflow</small></div></div>
+</div>
+</header>
+
+<main>
+<section id="cours" class="section">
+<div class="section-head"><span>01</span><h2>Vue d'ensemble</h2></div>
+<p class="section-intro">Commence par les notions ci-dessous, puis utilise les fiches détaillées comme support de révision.</p>
+<div class="unreal-overview">
+<div class="unreal-stat"><div class="label">Logique</div><strong>Blueprints</strong><p>Construire le gameplay avec des nœuds et des événements.</p></div>
+<div class="unreal-stat"><div class="label">Données</div><strong>Variables</strong><p>Stocker, modifier et transmettre les valeurs du jeu.</p></div>
+<div class="unreal-stat"><div class="label">Organisation</div><strong>Naming</strong><p>Nommer les assets pour retrouver vite le bon fichier.</p></div>
+</div>
+<div class="important"><strong>⭐ À retenir :</strong> dans un Blueprint, l'exécution suit les fils d'exécution et chaque nœud s'exécute lorsqu'il est déclenché par la logique du graphe. citeturn0search6</div>
+</section>
+
+<section id="blueprints" class="section dark">
+<div class="section-head"><span>02</span><h2>Blueprints</h2></div>
+<p class="section-intro">Les fiches ci-dessous reprennent les logiques vues dans ton cours, dans l'ordre où il est utile de les comprendre.</p>
+<div class="blueprint-list">
+<div class="blueprint-item">
+<h3>01 · Overlap → vérifier le joueur → Branch</h3>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><svg viewBox="0 0 1400 780" role="img" aria-label="Schéma Unreal Blueprint expliquant un événement Overlap, la vérification du joueur, le Branch et le Print String" style="display:block;width:100%;min-width:900px;height:auto;background:#101214;border-radius:14px"><defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#24272b" stroke-width="1"/></pattern></defs><rect width="1400" height="780" fill="url(#grid)"/><text x="55" y="65" fill="#f3eee4" font-size="42" font-weight="700">Blueprint — Overlap + vérification du joueur</text><text x="55" y="98" fill="#aaa" font-size="20">Un événement déclenche la logique, puis un Branch décide si la condition est vraie.</text>
 <rect x="55" y="150" width="350" height="210" rx="12" fill="#171a1d" stroke="#a33" stroke-width="3"/><rect x="55" y="150" width="350" height="48" rx="12" fill="#9b2929"/><text x="78" y="181" fill="#fff" font-size="21" font-weight="700">On Component Begin Overlap</text><text x="80" y="235" fill="#ddd" font-size="18">Other Actor</text><circle cx="390" cy="230" r="8" fill="#28a7df"/><text x="80" y="275" fill="#ddd" font-size="18">Other Comp</text><circle cx="390" cy="270" r="8" fill="#28a7df"/><text x="80" y="315" fill="#ddd" font-size="18">Sweep Result</text><circle cx="390" cy="310" r="8" fill="#28a7df"/>
 <rect x="70" y="400" width="300" height="105" rx="12" fill="#17251b" stroke="#4caf50" stroke-width="2"/><text x="95" y="438" fill="#b8f5bf" font-size="21" font-weight="700">Get Player Character</text><text x="95" y="472" fill="#ddd" font-size="17">Player Index 0</text><circle cx="350" cy="470" r="8" fill="#28a7df"/>
 <rect x="510" y="245" width="150" height="100" rx="12" fill="#202326" stroke="#555"/><text x="585" y="300" text-anchor="middle" fill="#ddd" font-size="36" font-weight="700">==</text><circle cx="520" cy="270" r="8" fill="#28a7df"/><circle cx="520" cy="320" r="8" fill="#28a7df"/><circle cx="650" cy="295" r="8" fill="#e33"/>
 <rect x="790" y="220" width="190" height="150" rx="12" fill="#202326" stroke="#666"/><text x="815" y="252" fill="#ddd" font-size="24" font-weight="700">Branch</text><text x="815" y="300" fill="#ddd" font-size="17">Condition</text><circle cx="805" cy="300" r="8" fill="#e33"/><text x="930" y="285" fill="#ddd" font-size="17">True</text><text x="930" y="335" fill="#aaa" font-size="17">False</text><circle cx="975" cy="280" r="8" fill="#fff"/><circle cx="975" cy="330" r="8" fill="#aaa"/>
 <rect x="1080" y="245" width="245" height="105" rx="12" fill="#17242d" stroke="#398ac1" stroke-width="2"/><text x="1105" y="278" fill="#fff" font-size="23" font-weight="700">Print String</text><text x="1105" y="315" fill="#ddd" font-size="18">In String: Hello</text>
 <path d="M405 215 C540 215 590 215 790 270" fill="none" stroke="#fff" stroke-width="4"/><path d="M390 230 C450 230 470 270 510 270" fill="none" stroke="#28a7df" stroke-width="4"/><path d="M350 470 C430 470 450 320 510 320" fill="none" stroke="#28a7df" stroke-width="4"/><path d="M660 295 C710 295 740 300 790 300" fill="none" stroke="#e33" stroke-width="4"/><path d="M980 280 C1020 280 1040 280 1080 280" fill="none" stroke="#fff" stroke-width="4"/>
-<rect x="55" y="575" width="1270" height="145" rx="14" fill="#151719" stroke="#45484c"/><text x="80" y="610" fill="#f3eee4" font-size="24" font-weight="700">À retenir</text><text x="80" y="648" fill="#ddd" font-size="19">1. Overlap déclenche l'événement  →  2. On récupère l'acteur  →  3. On vérifie s'il s'agit du joueur</text><text x="80" y="682" fill="#ddd" font-size="19">4. Branch sépare True / False  →  5. Si True, on exécute l'action suivante, ici Print String.</text></svg></div></section><section id="snap" class="section"><div class="section-head"><span>02</span><h2>Snap & raccourcis</h2></div><div class="cards"><article class="card"><div class="tag">SNAP</div><h3>Option de Snap</h3><p>Activer l'option de Snap pour faciliter le placement et le déplacement des objets.</p></article><article class="card"><div class="tag">F</div><h3>Snapper sur un objet</h3><p><strong>F</strong> — Snapper / cadrer sur l'objet. <strong>Alt</strong> — Bouger autour de l'objet snappé.</p></article><article class="card"><div class="tag">SHIFT</div><h3>Déplacer avec l'objet</h3><p><strong>Shift</strong> — Déplacer avec l'objet.</p></article><article class="card"><div class="tag">ALT</div><h3>Dupliquer</h3><p><strong>Alt + bouger</strong> — Dupliquer l'objet pendant son déplacement.</p></article></div></section>
-<section id="raccourcis" class="section"><div class="section-head"><span>03</span><h2>Raccourcis indispensables</h2></div><div class="callout" style="margin-bottom:24px"><strong>À connaître en priorité :</strong> ces raccourcis couvrent la navigation dans le viewport, la transformation des objets, l'édition générale et les manipulations rapides. Les raccourcis peuvent varier selon le contexte ou le keymap utilisé.</div><div class="tips-grid">
-<div><strong>Z — Déplacer</strong><p>Active l'outil de translation pour déplacer un objet sur les axes.</p></div>
-<div><strong>E — Rotation</strong><p>Active l'outil de rotation.</p></div>
-<div><strong>R — Scale</strong><p>Active l'outil de mise à l'échelle.</p></div>
-<div><strong>Space — Changer d'outil</strong><p>Alterne entre les principaux modes de transformation : Move, Rotate et Scale.</p></div>
-<div><strong>F — Focus</strong><p>Cadre la sélection dans le viewport pour la retrouver rapidement.</p></div>
-<div><strong>Alt + clic gauche</strong><p>Orbite autour du point de vue dans le viewport.</p></div>
-<div><strong>Molette</strong><p>Zoom avant / arrière dans le viewport.</p></div>
-<div><strong>Molette + déplacement</strong><p>Déplace la vue (pan) dans le viewport.</p></div>
-<div><strong>Clic droit + WASD</strong><p>Déplace la caméra librement dans le viewport.</p></div>
-<div><strong>G</strong><p>Active le mode Game View dans le viewport.</p></div>
-<div><strong>Alt + déplacement</strong><p>Duplique rapidement un objet pendant son déplacement.</p></div>
-<div><strong>Shift + déplacement</strong><p>Permet de déplacer la vue en même temps que l'objet sélectionné.</p></div>
-<div><strong>Ctrl + D</strong><p>Duplique l'objet sélectionné.</p></div>
-<div><strong>Delete</strong><p>Supprime l'objet ou l'élément sélectionné.</p></div>
-<div><strong>Ctrl + S</strong><p>Sauvegarde le niveau ou l'asset courant.</p></div>
-<div><strong>Ctrl + Z</strong><p>Annule la dernière action.</p></div>
-<div><strong>Ctrl + Shift + Z</strong><p>Rétablit l'action annulée.</p></div>
-<div><strong>Ctrl + P</strong><p>Ouvre la recherche rapide d'assets et de contenus.</p></div>
-<div><strong>C — Commentaire Blueprint</strong><p>Crée une zone de commentaire dans un graphe Blueprint lorsque le graphe est actif.</p></div>
-</div><div class="exercise-card" style="margin-top:24px"><h3>🧠 Fiche express à mémoriser</h3><p><strong>Z</strong> = déplacer · <strong>E</strong> = tourner · <strong>R</strong> = scaler · <strong>F</strong> = cadrer · <strong>Alt + déplacement</strong> = dupliquer · <strong>Ctrl + D</strong> = dupliquer · <strong>Delete</strong> = supprimer · <strong>Ctrl + S</strong> = sauvegarder · <strong>Ctrl + Z</strong> = annuler.</p></div></section><section id="ressources" class="section dark"><div class="section-head"><span>04</span><h2>Ressources & nomenclature</h2></div><div class="course-grid">
-<article class="course-card"><div class="tag">MIXAMO</div><h3>Personnages & animations</h3><p>Utiliser Mixamo pour récupérer un modèle de personnage et/ou des animations.</p><a class="exercise-button" href="https://www.mixamo.com/#/" target="_blank" rel="noopener">Ouvrir Mixamo →</a></article>
-<article class="course-card"><div class="tag">CGTRADER</div><h3>Modèles 3D pour Unreal</h3><p>Rechercher des modèles 3D compatibles avec Unreal Engine. Vérifier le format, le rig, les textures et les conditions d'utilisation avant l'import.</p><a class="exercise-button" href="https://www.cgtrader.com/fr/3d-modeles/unreal-engine" target="_blank" rel="noopener">Voir les modèles Unreal →</a></article>
-</div><div class="exercise-card" style="margin-top:24px"><h3>Convention de nommage</h3><p>Pour garder un projet propre, utilise le format :</p><div style="font-size:26px;font-weight:800;color:#f3eee4;margin:18px 0">[Y_Z_X]</div><ul><li><strong>Y</strong> = ce que vous voulez / une catégorie ou une précision.</li><li><strong>Z</strong> = nom du modèle ou de l'animation.</li><li><strong>X</strong> = nom de votre projet.</li></ul><p><strong>Exemple — modèle de personnage :</strong> <code>Character_Hero_MonProjet</code></p><p><strong>Exemple — animation :</strong> <code>Run_Hero_MonProjet</code></p><p class="muted">Pour les animations, privilégier un nom clair en anglais : <code>Idle</code>, <code>Walk</code>, <code>Run</code>, <code>Jump</code>, etc.</p></div></section>
-<section id="naming" class="section">
-<div class="section-head"><span>05</span><h2>Naming Conventions — Unreal</h2></div>
-<div class="callout" style="margin-bottom:24px"><strong>Convention vue dans le cours :</strong> utiliser un préfixe qui indique le type d'asset, puis un nom clair. Cela permet de retrouver rapidement les modèles, matériaux, textures, Blueprints et animations dans le Content Browser.</div><div class="exercise-card" style="margin-bottom:24px"><h3>Fiche visuelle</h3><div style="margin:24px 0;background:#101214;padding:14px;border-radius:14px;overflow:auto"><img src="assets/unreal-naming-conventions.svg" alt="Fiche visuelle des conventions de nommage Unreal et exemples d'assets" style="display:block;width:100%;min-width:900px;height:auto"></div></div>
-<div class="tips-grid">
-<div><strong>Skeletal Mesh</strong><p><code>SKM_</code> — exemple : <code>SKM_YBot</code></p></div>
-<div><strong>Static Mesh</strong><p><code>SM_</code> — exemple : <code>SM_Rock</code></p></div>
-<div><strong>Material</strong><p><code>M_</code> — exemple : <code>M_Metal</code></p></div>
-<div><strong>Material Instance</strong><p><code>MI_</code> — exemple : <code>MI_Alpha_Body</code></p></div>
-<div><strong>Texture</strong><p><code>T_</code> — exemple : <code>T_Alpha_Body_BaseColor</code></p></div>
-<div><strong>Blueprint</strong><p><code>BP_</code> — exemple : <code>BP_ThirdPersonGameMode</code></p></div>
-<div><strong>Player Controller</strong><p><code>PC_</code> — convention présentée dans ton cours.</p></div>
-<div><strong>GameMode</strong><p><code>GM_</code> — convention présentée dans ton cours.</p></div>
-</div>
-<div class="exercise-card" style="margin-top:24px">
-<h3>Exemples vus dans le projet</h3>
-<div class="tips-grid">
-<div><strong>Matériaux</strong><p><code>Alpha_Body_MAT</code><br><code>Alpha_Joints_MAT</code><br>Ces assets sont affichés comme <strong>Material Instance</strong> dans le Content Browser.</p></div>
-<div><strong>Personnage YBot</strong><p><code>PA_YBot</code> = Physics Asset<br><code>SK_YBot</code> = Skeleton<br><code>SKM_YBot</code> = Skeletal Mesh</p></div>
-<div><strong>Animation</strong><p><code>Warrior_Idle__1_</code> — exemple de nom d'animation visible dans l'Animation Editor.</p></div>
-<div><strong>Assets associés</strong><p>Le Content Browser peut regrouper les meshes, skeletons, animations et matériaux d'un même personnage dans des dossiers dédiés.</p></div>
+<rect x="55" y="575" width="1270" height="145" rx="14" fill="#151719" stroke="#45484c"/><text x="80" y="610" fill="#f3eee4" font-size="24" font-weight="700">À retenir</text><text x="80" y="648" fill="#ddd" font-size="19">1. Overlap déclenche l'événement  →  2. On récupère l'acteur  →  3. On vérifie s'il s'agit du joueur</text><text x="80" y="682" fill="#ddd" font-size="19">4. Branch sépare True / False  →  5. Si True, on exécute l'action suivante, ici Print String.</text></svg></div>
+<div class="course-steps">
+<div class="course-step"><div class="number">1</div><div><h3>Overlap</h3><p><span class="highlight">On Component Begin Overlap</span> déclenche la logique lorsqu'un acteur entre dans la zone.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>Récupérer le joueur</h3><p><code>Get Player Character</code> permet d'obtenir le Character du joueur.</p></div></div>
+<div class="course-step"><div class="number">3</div><div><h3>Comparer</h3><p><code>==</code> vérifie si l'acteur détecté correspond au joueur.</p></div></div>
+<div class="course-step"><div class="number">4</div><div><h3>Branch</h3><p><span class="highlight">True</span> continue la logique ; <strong>False</strong> arrête cette branche.</p></div></div>
 </div>
 </div>
-<div class="exercise-card" style="margin-top:24px">
-<h3>Format à retenir</h3>
-<p class="muted">Pour tes fichiers de cours, retiens d'abord :</p>
-<div style="font-size:26px;font-weight:800;color:#f3eee4;margin:18px 0"><code>[PREFIX]_[NOM]_[DESCRIPTEUR]</code></div>
-<p><strong>Exemples :</strong> <code>SKM_YBot</code> · <code>MI_Alpha_Body</code> · <code>BP_ThirdPersonGameMode</code> · <code>AS_Warrior_Idle</code></p>
-<p class="muted">Epic recommande également une convention structurée du type <code>[AssetTypePrefix]_[AssetName]_[Descriptor]_[OptionalVariant]</code>. Les préfixes officiels peuvent différer de ceux de ton support de cours ; pour le cours, conserve les préfixes demandés par ton enseignant.</p>
+
+<div class="blueprint-item">
+<h3>02 · Modifier une variable avec un Custom Event</h3>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-increase-coin-print-string.svg" alt="Blueprint Increase Coin et Print String" style="display:block;width:100%;min-width:820px;height:auto"></div>
+<div class="definition"><strong>Formule essentielle</strong><p><code>Player Coins = Player Coins + 1</code></p></div>
+<div class="course-steps">
+<div class="course-step"><div class="number">1</div><div><h3>Custom Event</h3><p><code>Increase Coin</code> lance la modification.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>Get</h3><p>On récupère la valeur actuelle de <code>Player Coins</code>.</p></div></div>
+<div class="course-step"><div class="number">3</div><div><h3>Ajouter</h3><p>Le nœud <code>+</code> ajoute <span class="highlight">1</span>.</p></div></div>
+<div class="course-step"><div class="number">4</div><div><h3>Set</h3><p><code>Set Player Coins</code> enregistre la nouvelle valeur.</p></div></div>
 </div>
-</section><section id="variables" class="section dark"><div class="section-head"><span>03</span><h2>Types de variables</h2></div><div class="tips-grid"><div><strong>Boolean</strong><p><strong>0 / 1</strong> — valeur binaire.</p></div><div><strong>Float</strong><p><strong>0.01</strong> — nombre décimal.</p></div><div><strong>Integer</strong><p><strong>1</strong> — nombre entier.</p></div><div><strong>String</strong><p><strong>text code</strong> — texte destiné au code.</p></div><div><strong>Text</strong><p><strong>text user</strong> — texte destiné à l'utilisateur.</p></div><div><strong>Vector</strong><p><strong>X Y Z</strong> — position / direction en 3 axes.</p></div><div><strong>Rotation</strong><p><strong>X Z Y</strong> — valeurs de rotation.</p></div><div><strong>Transform</strong><p><strong>3 × X Y Z</strong> — Location, Rotation, Scale.</p></div></div></section><section id="blueprints-2" class="section"><div class="section-head"><span>04</span><h2>Blueprints — fiches de cours</h2></div>
-<div class="exercise-card" style="margin-bottom:24px"><h3>1. Player → Controller → Character → GameMode</h3><div style="margin:24px 0;background:#101214;padding:14px;border-radius:14px;overflow:auto"><img src="assets/unreal-player-game-storage.svg" alt="Schéma Unreal Player, Player Controller, Character, GameMode, SaveGame et GameInstance" style="display:block;width:100%;min-width:820px;height:auto"></div><p><strong>Flux général :</strong> l'utilisateur agit via le système d'Input, le <strong>Player Controller</strong> contrôle le joueur, puis le <strong>Character</strong> est possédé par ce controller. Le <strong>GameMode</strong> définit les règles et classes utilisées par le niveau.</p><div class="tips-grid"><div><strong>Player</strong><p>Entrées utilisateur / Input Actions.</p></div><div><strong>Player Controller</strong><p>Reçoit et gère les actions du joueur.</p></div><div><strong>Possess</strong><p>Le Controller prend le contrôle du Character.</p></div><div><strong>Character</strong><p>Personnage contrôlé dans le niveau.</p></div><div><strong>GameMode</strong><p>Règles du jeu et classes par défaut du niveau.</p></div><div><strong>GameInstance</strong><p>Permet de conserver des données pendant la session du jeu.</p></div></div><p class="muted"><strong>À retenir :</strong> chaque niveau possède son propre Player Controller et son propre GameMode.</p></div>
-<div class="exercise-card" style="margin-bottom:24px"><h3>2. Modifier une variable avec un Custom Event</h3><div style="margin:24px 0;background:#101214;padding:14px;border-radius:14px;overflow:auto"><img src="assets/unreal-increase-coin-print-string.svg" alt="Schéma Unreal Increase Coin et Print String" style="display:block;width:100%;min-width:820px;height:auto"></div><p><strong>Increase Coin</strong> est un événement personnalisé qui augmente la variable <strong>Player Coins</strong>.</p><ol><li><strong>Custom Event — Increase Coin</strong> déclenche l'action.</li><li><strong>Player Coins</strong> récupère la valeur actuelle.</li><li><strong>+</strong> ajoute <strong>1</strong>.</li><li><strong>Set Player Coins</strong> enregistre la nouvelle valeur.</li></ol><div class="callout"><strong>Formule :</strong> <code>Player Coins = Player Coins + 1</code></div></div>
-<div class="exercise-card" style="margin-bottom:24px"><h3>3. Afficher une variable avec Print String</h3><p><strong>Event Tick</strong> s'exécute régulièrement. La valeur de <strong>Player Coins</strong> est convertie en texte puis envoyée à <strong>Print String</strong> pour être affichée à l'écran.</p><div class="tips-grid"><div><strong>Event Tick</strong><p>Déclenche la chaîne d'exécution.</p></div><div><strong>Player Coins</strong><p>Valeur numérique à afficher.</p></div><div><strong>Conversion</strong><p>Transforme le nombre en texte.</p></div><div><strong>Print String</strong><p>Affiche le résultat à l'écran et/ou dans le log.</p></div></div></div>
-<div class="exercise-card"><h3>4. Ramasser une pièce : vérifier → GameMode → ajouter → détruire</h3><div style="margin:24px 0;background:#101214;padding:14px;border-radius:14px;overflow:auto"><img src="assets/unreal-coin-overlap-cast-destroy.svg" alt="Schéma Unreal Overlap, vérification du joueur, GameMode, Cast, Increase Coin et Destroy Actor" style="display:block;width:100%;min-width:900px;height:auto"></div><p>Cette logique combine l'Overlap avec le GameMode pour donner une pièce au joueur.</p><ol><li><strong>On Component Begin Overlap</strong> détecte qu'un acteur entre dans la sphère.</li><li><strong>Get Player Character</strong> récupère le personnage du joueur.</li><li><strong>==</strong> compare l'acteur qui a déclenché l'Overlap avec le joueur.</li><li><strong>Branch</strong> continue uniquement si la condition est <strong>True</strong>.</li><li><strong>Get Game Mode</strong> récupère le GameMode actif.</li><li><strong>Cast to BP_ThirdPersonGameMode</strong> vérifie le type et permet d'utiliser ses fonctions.</li><li><strong>Increase Coin</strong> augmente le compteur.</li><li><strong>Destroy Actor</strong> supprime la pièce après récupération.</li></ol><div class="callout"><strong>Chaîne à mémoriser :</strong> Overlap → vérifier le joueur → Get GameMode → Cast → Increase Coin → Destroy Actor.</div></div>
-</section></main>
-<footer><span>COURS E-ARTSUP</span><span><a href="index.html">← Retour à l'accueil</a></span></footer></body></html>
+</div>
+
+<div class="blueprint-item">
+<h3>03 · Afficher une variable</h3>
+<p><span class="highlight">Event Tick</span> déclenche régulièrement la chaîne ; la valeur est convertie en texte puis envoyée à <code>Print String</code>.</p>
+<div class="key-grid">
+<div class="key-card"><h3>Event Tick</h3><p>Déclenche la chaîne d'exécution.</p></div>
+<div class="key-card"><h3>Player Coins</h3><p>Valeur numérique à afficher.</p></div>
+<div class="key-card"><h3>To String</h3><p>Convertit la valeur en texte.</p></div>
+<div class="key-card"><h3>Print String</h3><p>Affiche le résultat à l'écran / dans le log.</p></div>
+</div>
+</div>
+
+<div class="blueprint-item">
+<h3>04 · Ramasser une pièce</h3>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-coin-overlap-cast-destroy.svg" alt="Blueprint de récupération d'une pièce" style="display:block;width:100%;min-width:900px;height:auto"></div>
+<div class="warning"><strong>Chaîne à mémoriser :</strong> Overlap → vérifier le joueur → Get GameMode → Cast → Increase Coin → Destroy Actor.</div>
+<ol>
+<li><strong>On Component Begin Overlap</strong> détecte l'entrée dans la sphère.</li>
+<li><strong>Get Player Character</strong> récupère le personnage.</li>
+<li><strong>==</strong> vérifie l'identité du joueur.</li>
+<li><strong>Branch</strong> continue uniquement si <span class="highlight">True</span>.</li>
+<li><strong>Get Game Mode</strong> récupère le GameMode actif.</li>
+<li><strong>Cast to BP_ThirdPersonGameMode</strong> permet d'utiliser ses fonctions.</li>
+<li><strong>Increase Coin</strong> augmente le compteur.</li>
+<li><strong>Destroy Actor</strong> supprime la pièce.</li>
+</ol>
+</div>
+</div>
+</section>
+
+<section id="variables" class="section">
+<div class="section-head"><span>03</span><h2>Types de variables</h2></div>
+<p class="section-intro">Une variable stocke une valeur ou une référence. Unreal propose plusieurs types de données ; les principaux types sont identifiables visuellement dans les Blueprints. citeturn0search1</p>
+<div class="key-grid">
+<div class="key-card"><h3>Boolean</h3><p><span class="highlight">0 / 1</span> — vrai ou faux.</p></div>
+<div class="key-card"><h3>Float</h3><p><span class="highlight">0.01</span> — nombre décimal.</p></div>
+<div class="key-card"><h3>Integer</h3><p><span class="highlight">1</span> — nombre entier.</p></div>
+<div class="key-card"><h3>String</h3><p><code>text code</code> — chaîne de caractères.</p></div>
+<div class="key-card"><h3>Text</h3><p><code>text user</code> — texte affiché à l'utilisateur.</p></div>
+<div class="key-card"><h3>Vector</h3><p><span class="highlight">X Y Z</span> — trois valeurs.</p></div>
+<div class="key-card"><h3>Rotation / Rotator</h3><p>Valeurs décrivant une rotation 3D.</p></div>
+<div class="key-card"><h3>Transform</h3><p><span class="highlight">Location + Rotation + Scale</span>.</p></div>
+</div>
+<div class="important"><strong>🧠 Mémo :</strong> <code>Vector = X,Y,Z</code> · <code>Rotator = rotation</code> · <code>Transform = position + rotation + scale</code>.</div>
+</section>
+
+<section id="naming" class="section dark">
+<div class="section-head"><span>04</span><h2>Conventions de nommage</h2></div>
+<p class="section-intro">Le but est simple : reconnaître le type d'asset immédiatement dans le Content Browser et éviter les noms ambigus. Epic recommande une convention structurée basée sur un préfixe, un nom, un descripteur et éventuellement une variante. citeturn0search0</p>
+<div class="exercise-card" style="margin-bottom:24px"><h3>Fiche visuelle du cours</h3><div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-naming-conventions.svg" alt="Conventions de nommage Unreal" style="display:block;width:100%;min-width:900px;height:auto"></div></div>
+<div class="definition"><strong>Format général</strong><p><code>[PREFIX]_[NOM]_[DESCRIPTEUR]_[VARIANTE]</code></p></div>
+<table class="naming-table">
+<thead><tr><th>Asset</th><th>Préfixe</th><th>Exemple</th></tr></thead>
+<tbody>
+<tr><td>Skeletal Mesh</td><td><code>SKM_</code></td><td><code>SKM_YBot</code></td></tr>
+<tr><td>Static Mesh</td><td><code>SM_</code></td><td><code>SM_Rock</code></td></tr>
+<tr><td>Material</td><td><code>M_</code></td><td><code>M_Metal</code></td></tr>
+<tr><td>Material Instance</td><td><code>MI_</code></td><td><code>MI_Alpha_Body</code></td></tr>
+<tr><td>Texture</td><td><code>T_</code></td><td><code>T_Alpha_Body_BaseColor</code></td></tr>
+<tr><td>Blueprint</td><td><code>BP_</code></td><td><code>BP_ThirdPersonGameMode</code></td></tr>
+<tr><td>Player Controller</td><td><code>PC_</code></td><td><code>PC_Player</code></td></tr>
+<tr><td>GameMode</td><td><code>GM_</code></td><td><code>GM_ThirdPerson</code></td></tr>
+</tbody>
+</table>
+<div class="important"><strong>⚠️ Important :</strong> les préfixes de ton support de cours ne correspondent pas tous à la recommandation actuelle d'Epic. Par exemple, Epic utilise <code>SK_</code> pour Skeletal Mesh et <code>AS_</code> pour Animation Sequence. Pour l'examen, garde la convention demandée par ton enseignant ; pour un projet personnel, choisis une convention et applique-la partout. citeturn0search0</div>
+<div class="quick-sheet">
+<h3>Exemples de tes captures</h3>
+<p><strong>Matériaux :</strong> <code>Alpha_Body_MAT</code> · <code>Alpha_Joints_MAT</code></p>
+<p><strong>YBot :</strong> <code>PA_YBot</code> = Physics Asset · <code>SK_YBot</code> = Skeleton · <code>SKM_YBot</code> = Skeletal Mesh</p>
+<p><strong>Animation :</strong> <code>Warrior_Idle__1_</code></p>
+<p><strong>Animations claires :</strong> <code>Idle</code> · <code>Walk</code> · <code>Run</code> · <code>Jump</code></p>
+</div>
+</section>
+
+<section id="snap" class="section">
+<div class="section-head"><span>05</span><h2>Snap & manipulation</h2></div>
+<div class="key-grid">
+<div class="key-card"><h3>SNAP</h3><p>Active l'option de Snap pour faciliter le placement.</p></div>
+<div class="key-card"><h3>F</h3><p><span class="highlight">Focus / cadrage</span> sur l'objet sélectionné.</p></div>
+<div class="key-card"><h3>Alt</h3><p>Permet de tourner autour de l'objet ou de dupliquer pendant un déplacement selon le contexte.</p></div>
+<div class="key-card"><h3>Shift</h3><p>Déplacement avec l'objet selon le workflow présenté en cours.</p></div>
+</div>
+<div class="warning"><strong>⚠️ Attention :</strong> les raccourcis Unreal peuvent dépendre du contexte, de l'éditeur actif et du keymap. Utilise cette fiche comme mémo du cours.</div>
+</section>
+
+<section id="raccourcis" class="section dark">
+<div class="section-head"><span>06</span><h2>Raccourcis indispensables</h2></div>
+<div class="key-grid">
+<div class="key-card"><h3>Z</h3><p>Déplacer</p></div><div class="key-card"><h3>E</h3><p>Rotation</p></div><div class="key-card"><h3>R</h3><p>Scale</p></div><div class="key-card"><h3>Space</h3><p>Changer d'outil</p></div>
+<div class="key-card"><h3>F</h3><p>Focus</p></div><div class="key-card"><h3>Alt + clic gauche</h3><p>Orbiter</p></div><div class="key-card"><h3>Molette</h3><p>Zoom</p></div><div class="key-card"><h3>Molette + déplacement</h3><p>Pan</p></div>
+<div class="key-card"><h3>Clic droit + WASD</h3><p>Caméra libre</p></div><div class="key-card"><h3>G</h3><p>Game View</p></div><div class="key-card"><h3>Alt + déplacement</h3><p>Dupliquer</p></div><div class="key-card"><h3>Ctrl + D</h3><p>Dupliquer</p></div>
+<div class="key-card"><h3>Delete</h3><p>Supprimer</p></div><div class="key-card"><h3>Ctrl + S</h3><p>Sauvegarder</p></div><div class="key-card"><h3>Ctrl + Z</h3><p>Annuler</p></div><div class="key-card"><h3>Ctrl + Shift + Z</h3><p>Rétablir</p></div>
+<div class="key-card"><h3>Ctrl + P</h3><p>Recherche rapide</p></div><div class="key-card"><h3>C</h3><p>Commentaire Blueprint</p></div>
+</div>
+<div class="quick-sheet"><h3>🧠 Fiche express</h3><p><strong>Z</strong> déplacer · <strong>E</strong> tourner · <strong>R</strong> scaler · <strong>F</strong> cadrer · <strong>Alt + déplacement</strong> dupliquer · <strong>Ctrl + S</strong> sauvegarder · <strong>Ctrl + Z</strong> annuler.</p></div>
+</section>
+
+<section id="ressources" class="section">
+<div class="section-head"><span>07</span><h2>Ressources & workflow</h2></div>
+<div class="resource-grid">
+<div class="resource-card"><div class="tag">MIXAMO</div><h3>Personnages & animations</h3><p>Télécharger un personnage et/ou des animations, puis organiser les assets dans Unreal avec une convention de nommage claire.</p><a class="exercise-button" href="https://www.mixamo.com/#/" target="_blank" rel="noopener">Ouvrir Mixamo →</a></div>
+<div class="resource-card"><div class="tag">CGTRADER</div><h3>Modèles 3D pour Unreal</h3><p>Rechercher un modèle compatible et vérifier avant import le format, le rig, les textures et les conditions d'utilisation.</p><a class="exercise-button" href="https://www.cgtrader.com/fr/3d-modeles/unreal-engine" target="_blank" rel="noopener">Voir les modèles Unreal →</a></div>
+</div>
+<div class="course-steps" style="margin-top:24px">
+<div class="course-step"><div class="number">1</div><div><h3>Télécharger</h3><p>Choisir le personnage ou l'animation dont tu as besoin.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>Vérifier</h3><p>Contrôler format, skeleton / rig, textures et droits d'utilisation.</p></div></div>
+<div class="course-step"><div class="number">3</div><div><h3>Importer</h3><p>Importer dans le Content Browser et ranger dans les bons dossiers.</p></div></div>
+<div class="course-step"><div class="number">4</div><div><h3>Renommer</h3><p>Appliquer immédiatement la convention de nommage du projet.</p></div></div>
+</div>
+</section>
+</main>
+<footer><span>COURS E-ARTSUP · UNREAL</span><span><a href="index.html">← Retour à l'accueil</a></span></footer>
+</body>
+</html>
