@@ -33,7 +33,7 @@
 <div class="unreal-stat"><div class="label">Données</div><strong>Variables</strong><p>Stocker, modifier et transmettre les valeurs du jeu.</p></div>
 <div class="unreal-stat"><div class="label">Organisation</div><strong>Naming</strong><p>Nommer les assets pour retrouver vite le bon fichier.</p></div>
 </div>
-<div class="important"><strong>⭐ À retenir :</strong> dans un Blueprint, l'exécution suit les fils d'exécution et chaque nœud s'exécute lorsqu'il est déclenché par la logique du graphe. citeturn0search6</div>
+<div class="important"><strong>⭐ À retenir :</strong> dans un Blueprint, l'exécution suit les fils d'exécution et chaque nœud s'exécute lorsqu'il est déclenché par la logique du graphe.</div>
 </section>
 
 <section id="blueprints" class="section dark">
@@ -62,12 +62,17 @@
 <h3>02 · Modifier une variable avec un Custom Event</h3>
 <div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-increase-coin-print-string.svg" alt="Blueprint Increase Coin et Print String" style="display:block;width:100%;min-width:820px;height:auto"></div>
 <div class="definition"><strong>Formule essentielle</strong><p><code>Player Coins = Player Coins + 1</code></p></div>
-<div class="course-steps">
-<div class="course-step"><div class="number">1</div><div><h3>Custom Event</h3><p><code>Increase Coin</code> lance la modification.</p></div></div>
-<div class="course-step"><div class="number">2</div><div><h3>Get</h3><p>On récupère la valeur actuelle de <code>Player Coins</code>.</p></div></div>
-<div class="course-step"><div class="number">3</div><div><h3>Ajouter</h3><p>Le nœud <code>+</code> ajoute <span class="highlight">1</span>.</p></div></div>
-<div class="course-step"><div class="number">4</div><div><h3>Set</h3><p><code>Set Player Coins</code> enregistre la nouvelle valeur.</p></div></div>
-</div>
+<table class="revision-table">
+<thead><tr><th>Étape</th><th>Nœud</th><th>Action</th><th>Exemple</th></tr></thead>
+<tbody>
+<tr><td>01</td><td><code>Custom Event</code></td><td>Lance la logique</td><td><strong>Increase Coin</strong></td></tr>
+<tr><td>02</td><td><code>Get</code></td><td>Récupère la valeur actuelle</td><td><code>Player Coins</code></td></tr>
+<tr><td>03</td><td><code>+</code></td><td>Ajoute une valeur</td><td><span class="highlight">+1</span></td></tr>
+<tr><td>04</td><td><code>Set</code></td><td>Enregistre la nouvelle valeur</td><td><code>Set Player Coins</code></td></tr>
+<tr><td>05</td><td><code>Print String</code></td><td>Affiche le résultat</td><td><code>Player Coins</code></td></tr>
+</tbody>
+</table>
+<div class="important"><strong>⭐ À retenir :</strong> <code>Custom Event → Get → + → Set</code>. Le Custom Event sert ici de point de départ pour modifier la variable.</div>
 </div>
 
 <div class="blueprint-item">
@@ -101,23 +106,26 @@
 
 <section id="variables" class="section">
 <div class="section-head"><span>03</span><h2>Types de variables</h2></div>
-<p class="section-intro">Une variable stocke une valeur ou une référence. Unreal propose plusieurs types de données ; les principaux types sont identifiables visuellement dans les Blueprints. citeturn0search1</p>
-<div class="key-grid">
-<div class="key-card"><h3>Boolean</h3><p><span class="highlight">0 / 1</span> — vrai ou faux.</p></div>
-<div class="key-card"><h3>Float</h3><p><span class="highlight">0.01</span> — nombre décimal.</p></div>
-<div class="key-card"><h3>Integer</h3><p><span class="highlight">1</span> — nombre entier.</p></div>
-<div class="key-card"><h3>String</h3><p><code>text code</code> — chaîne de caractères.</p></div>
-<div class="key-card"><h3>Text</h3><p><code>text user</code> — texte affiché à l'utilisateur.</p></div>
-<div class="key-card"><h3>Vector</h3><p><span class="highlight">X Y Z</span> — trois valeurs.</p></div>
-<div class="key-card"><h3>Rotation / Rotator</h3><p>Valeurs décrivant une rotation 3D.</p></div>
-<div class="key-card"><h3>Transform</h3><p><span class="highlight">Location + Rotation + Scale</span>.</p></div>
-</div>
+<p class="section-intro">Une variable stocke une valeur ou une référence. Unreal propose plusieurs types de données ; les principaux types sont identifiables visuellement dans les Blueprints.</p>
+<table class="revision-table">
+<thead><tr><th>Type</th><th>Valeur / exemple</th><th>À quoi ça sert</th><th>Mémo</th></tr></thead>
+<tbody>
+<tr><td><strong>Boolean</strong></td><td><span class="highlight">0 / 1</span></td><td>Vrai ou faux</td><td><code>true / false</code></td></tr>
+<tr><td><strong>Float</strong></td><td><span class="highlight">0.01</span></td><td>Nombre décimal</td><td><code>0.5</code>, <code>1.25</code></td></tr>
+<tr><td><strong>Integer</strong></td><td><span class="highlight">1</span></td><td>Nombre entier</td><td><code>0</code>, <code>10</code></td></tr>
+<tr><td><strong>String</strong></td><td><code>text code</code></td><td>Chaîne de caractères</td><td>Texte technique</td></tr>
+<tr><td><strong>Text</strong></td><td><code>text user</code></td><td>Texte destiné à l'utilisateur</td><td>UI / affichage</td></tr>
+<tr><td><strong>Vector</strong></td><td><span class="highlight">X Y Z</span></td><td>Position ou direction 3D</td><td><code>X, Y, Z</code></td></tr>
+<tr><td><strong>Rotator</strong></td><td><code>X / Y / Z</code></td><td>Rotation 3D</td><td>Pitch / Yaw / Roll</td></tr>
+<tr><td><strong>Transform</strong></td><td><span class="highlight">Location + Rotation + Scale</span></td><td>Décrit la transformation complète</td><td>Position + rotation + échelle</td></tr>
+</tbody>
+</table>
 <div class="important"><strong>🧠 Mémo :</strong> <code>Vector = X,Y,Z</code> · <code>Rotator = rotation</code> · <code>Transform = position + rotation + scale</code>.</div>
 </section>
 
 <section id="naming" class="section dark">
 <div class="section-head"><span>04</span><h2>Conventions de nommage</h2></div>
-<p class="section-intro">Le but est simple : reconnaître le type d'asset immédiatement dans le Content Browser et éviter les noms ambigus. Epic recommande une convention structurée basée sur un préfixe, un nom, un descripteur et éventuellement une variante. citeturn0search0</p>
+<p class="section-intro">Le but est simple : reconnaître le type d'asset immédiatement dans le Content Browser et éviter les noms ambigus. Epic recommande une convention structurée basée sur un préfixe, un nom, un descripteur et éventuellement une variante.</p>
 <div class="exercise-card" style="margin-bottom:24px"><h3>Fiche visuelle du cours</h3><div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-naming-conventions.svg" alt="Conventions de nommage Unreal" style="display:block;width:100%;min-width:900px;height:auto"></div></div>
 <div class="definition"><strong>Format général</strong><p><code>[PREFIX]_[NOM]_[DESCRIPTEUR]_[VARIANTE]</code></p></div>
 <table class="naming-table">
@@ -133,7 +141,7 @@
 <tr><td>GameMode</td><td><code>GM_</code></td><td><code>GM_ThirdPerson</code></td></tr>
 </tbody>
 </table>
-<div class="important"><strong>⚠️ Important :</strong> les préfixes de ton support de cours ne correspondent pas tous à la recommandation actuelle d'Epic. Par exemple, Epic utilise <code>SK_</code> pour Skeletal Mesh et <code>AS_</code> pour Animation Sequence. Pour l'examen, garde la convention demandée par ton enseignant ; pour un projet personnel, choisis une convention et applique-la partout. citeturn0search0</div>
+<div class="important"><strong>⚠️ Important :</strong> les préfixes de ton support de cours ne correspondent pas tous à la recommandation actuelle d'Epic. Par exemple, Epic utilise <code>SK_</code> pour Skeletal Mesh et <code>AS_</code> pour Animation Sequence. Pour l'examen, garde la convention demandée par ton enseignant ; pour un projet personnel, choisis une convention et applique-la partout.</div>
 <div class="quick-sheet">
 <h3>Exemples de tes captures</h3>
 <p><strong>Matériaux :</strong> <code>Alpha_Body_MAT</code> · <code>Alpha_Joints_MAT</code></p>
@@ -156,13 +164,29 @@
 
 <section id="raccourcis" class="section dark">
 <div class="section-head"><span>06</span><h2>Raccourcis indispensables</h2></div>
-<div class="key-grid">
-<div class="key-card"><h3>Z</h3><p>Déplacer</p></div><div class="key-card"><h3>E</h3><p>Rotation</p></div><div class="key-card"><h3>R</h3><p>Scale</p></div><div class="key-card"><h3>Space</h3><p>Changer d'outil</p></div>
-<div class="key-card"><h3>F</h3><p>Focus</p></div><div class="key-card"><h3>Alt + clic gauche</h3><p>Orbiter</p></div><div class="key-card"><h3>Molette</h3><p>Zoom</p></div><div class="key-card"><h3>Molette + déplacement</h3><p>Pan</p></div>
-<div class="key-card"><h3>Clic droit + WASD</h3><p>Caméra libre</p></div><div class="key-card"><h3>G</h3><p>Game View</p></div><div class="key-card"><h3>Alt + déplacement</h3><p>Dupliquer</p></div><div class="key-card"><h3>Ctrl + D</h3><p>Dupliquer</p></div>
-<div class="key-card"><h3>Delete</h3><p>Supprimer</p></div><div class="key-card"><h3>Ctrl + S</h3><p>Sauvegarder</p></div><div class="key-card"><h3>Ctrl + Z</h3><p>Annuler</p></div><div class="key-card"><h3>Ctrl + Shift + Z</h3><p>Rétablir</p></div>
-<div class="key-card"><h3>Ctrl + P</h3><p>Recherche rapide</p></div><div class="key-card"><h3>C</h3><p>Commentaire Blueprint</p></div>
-</div>
+<table class="revision-table">
+<thead><tr><th>Raccourci</th><th>Action</th><th>À retenir</th></tr></thead>
+<tbody>
+<tr><td><kbd>Z</kbd></td><td>Déplacer</td><td>Translation de l'objet</td></tr>
+<tr><td><kbd>E</kbd></td><td>Rotation</td><td>Faire tourner l'objet</td></tr>
+<tr><td><kbd>R</kbd></td><td>Scale</td><td>Modifier la taille</td></tr>
+<tr><td><kbd>Space</kbd></td><td>Changer d'outil</td><td>Basculer l'outil actif</td></tr>
+<tr><td><kbd>F</kbd></td><td>Focus</td><td>Cadrer la sélection</td></tr>
+<tr><td><kbd>Alt + clic gauche</kbd></td><td>Orbiter</td><td>Tourner autour de la scène / objet</td></tr>
+<tr><td><kbd>Molette</kbd></td><td>Zoom</td><td>Rapprocher / éloigner la vue</td></tr>
+<tr><td><kbd>Molette + déplacement</kbd></td><td>Pan</td><td>Déplacer la vue</td></tr>
+<tr><td><kbd>Clic droit + WASD</kbd></td><td>Caméra libre</td><td>Se déplacer dans la scène</td></tr>
+<tr><td><kbd>G</kbd></td><td>Game View</td><td>Basculer la vue jeu</td></tr>
+<tr><td><kbd>Alt + déplacement</kbd></td><td>Dupliquer</td><td>Créer une copie pendant le déplacement</td></tr>
+<tr><td><kbd>Ctrl + D</kbd></td><td>Dupliquer</td><td>Créer une copie</td></tr>
+<tr><td><kbd>Delete</kbd></td><td>Supprimer</td><td>Supprimer la sélection</td></tr>
+<tr><td><kbd>Ctrl + S</kbd></td><td>Sauvegarder</td><td>Enregistrer le projet</td></tr>
+<tr><td><kbd>Ctrl + Z</kbd></td><td>Annuler</td><td>Revenir en arrière</td></tr>
+<tr><td><kbd>Ctrl + Shift + Z</kbd></td><td>Rétablir</td><td>Refaire l'action</td></tr>
+<tr><td><kbd>Ctrl + P</kbd></td><td>Recherche rapide</td><td>Retrouver rapidement une commande / asset</td></tr>
+<tr><td><kbd>C</kbd></td><td>Commentaire Blueprint</td><td>Créer / utiliser un commentaire</td></tr>
+</tbody>
+</table>
 <div class="quick-sheet"><h3>🧠 Fiche express</h3><p><strong>Z</strong> déplacer · <strong>E</strong> tourner · <strong>R</strong> scaler · <strong>F</strong> cadrer · <strong>Alt + déplacement</strong> dupliquer · <strong>Ctrl + S</strong> sauvegarder · <strong>Ctrl + Z</strong> annuler.</p></div>
 </section>
 
