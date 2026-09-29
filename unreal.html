@@ -142,13 +142,14 @@
 </div>
 <div class="important"><strong>⭐ À retenir :</strong> <code>Update Animation → Try Get Pawn Owner → Get Velocity → Vector Length → Set Ground Speed</code>. La variable <code>Ground Speed</code> est un <span class="highlight">Float</span> qui pourra alimenter l’axe <code>Speed</code> du Blend Space 1D.</div>
 <div class="warning"><strong>⚠️ Mémo :</strong> <code>Velocity</code> est un vecteur ; <code>Vector Length</code> le convertit en valeur de vitesse. Exemple : <code>0</code> = Idle, vitesse intermédiaire = Walk, vitesse élevée = Run.</div>
+</div>
 <div class="blueprint-item">
 <h3>05 · Transitions : IdleWalk → Falling → JumpEnd</h3>
 <p class="section-intro">Une fois <code>Ground Speed</code> et <code>Is Falling</code> disponibles, la State Machine peut gérer la chute et le retour vers les animations au sol.</p>
 <div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-animation-transitions.svg" alt="State Machine avec IdleWalk, Falling et JumpEnd" style="display:block;width:100%;height:auto"></div>
 <div class="course-steps">
 <div class="course-step"><div class="number">1</div><div><h3>IdleWalk → Falling</h3><p>La transition est autorisée lorsque <span class="highlight">Is Falling = true</span>.</p></div></div>
-<div class="course-step"><div class="number">2</div><div><h3>Falling → JumpEnd</h3><p>La logique de transition utilise la variable <span class="highlight">Is Falling</span> pour déterminer quand passer à l'état suivant.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>Falling → JumpEnd</h3><p>La transition utilise <span class="highlight">NOT Is Falling</span> : elle devient vraie lorsque le personnage n'est plus en train de tomber.</p></div></div>
 <div class="course-step"><div class="number">3</div><div><h3>JumpEnd → IdleWalk</h3><p>La transition de retour est autorisée dans la capture fournie ; elle ramène le personnage vers l'état de déplacement au sol.</p></div></div>
 </div>
 <div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-animation-transition-rules.svg" alt="Règles des transitions de la State Machine" style="display:block;width:100%;height:auto"></div>
