@@ -12,7 +12,7 @@
 <header class="hero">
 <nav class="nav">
 <a class="brand" href="index.html">COURS<span>•</span>EARTSUP</a>
-<a href="index.html">Accueil</a><a href="#cours">Cours</a><a href="#blueprints">Blueprints</a><a href="#variables">Variables</a><a href="#naming">Naming</a><a href="#raccourcis">Raccourcis</a><a href="#ressources">Ressources</a>
+<a href="index.html">Accueil</a><a href="#cours">Cours</a><a href="#blueprints">Blueprints</a><a href="#animation">Animation</a><a href="#variables">Variables</a><a href="#naming">Naming</a><a href="#raccourcis">Raccourcis</a><a href="#ressources">Ressources</a>
 </nav>
 <div class="hero-grid">
 <div>
@@ -104,8 +104,40 @@
 </div>
 </section>
 
+<section id="animation" class="section">
+<div class="section-head"><span>03</span><h2>Animation : State Machine</h2></div>
+<p class="section-intro">Workflow à retenir pour mettre en place une animation Idle dans l'AnimGraph.</p>
+<div class="blueprint-list">
+<div class="blueprint-item">
+<h3>01 · Relier la State Machine à Output Pose</h3>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-animation-01-output-pose.svg" alt="State Machine reliée à Output Pose" style="display:block;width:100%;height:auto"></div>
+<div class="important"><strong>À retenir :</strong> la <span class="highlight">State Machine</span> doit être reliée à <code>Output Pose</code> pour envoyer la pose finale à l'AnimGraph.</div>
+</div>
+<div class="blueprint-item">
+<h3>02 · Créer le State « Idle »</h3>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-animation-02-state-idle.svg" alt="State Idle relié à Entry" style="display:block;width:100%;height:auto"></div>
+<div class="course-steps">
+<div class="course-step"><div class="number">1</div><div><h3>Ajouter un State</h3><p>Créer un nouveau State dans la State Machine.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>Le renommer</h3><p>Nommer le State <span class="highlight">Idle</span>.</p></div></div>
+<div class="course-step"><div class="number">3</div><div><h3>Relier Entry</h3><p>Relier <code>Entry</code> vers <code>Idle</code> pour définir l'état de départ.</p></div></div>
+</div>
+</div>
+<div class="blueprint-item">
+<h3>03 · Ajouter l'animation dans Idle</h3>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-animation-03-idle-loop.svg" alt="Animation Idle reliée à Output Animation Pose avec Loop Animation" style="display:block;width:100%;height:auto"></div>
+<div class="course-steps">
+<div class="course-step"><div class="number">1</div><div><h3>Ouvrir Idle</h3><p>Entrer dans le State <code>Idle</code>.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>Ajouter l'animation</h3><p>Placer l'animation <span class="highlight">Warrior_Idle__1_</span> dans le State.</p></div></div>
+<div class="course-step"><div class="number">3</div><div><h3>Relier la pose</h3><p>Relier le <code>Sequence Player</code> à <code>Output Animation Pose</code>.</p></div></div>
+<div class="course-step"><div class="number">4</div><div><h3>Activer la boucle</h3><p>Dans <strong>Détails → Settings</strong>, activer <span class="highlight">Loop Animation</span>.</p></div></div>
+</div>
+<div class="warning"><strong>⚠️ Important :</strong> si <code>Loop Animation</code> n'est pas activé, l'animation Idle ne se répète pas en boucle.</div>
+</div>
+</div>
+</section>
+
 <section id="variables" class="section">
-<div class="section-head"><span>03</span><h2>Types de variables</h2></div>
+<div class="section-head"><span>04</span><h2>Types de variables</h2></div>
 <p class="section-intro">Une variable stocke une valeur ou une référence. Unreal propose plusieurs types de données ; les principaux types sont identifiables visuellement dans les Blueprints.</p>
 <table class="revision-table">
 <thead><tr><th>Type</th><th>Valeur / exemple</th><th>À quoi ça sert</th><th>Mémo</th></tr></thead>
@@ -124,7 +156,7 @@
 </section>
 
 <section id="naming" class="section dark">
-<div class="section-head"><span>04</span><h2>Conventions de nommage</h2></div>
+<div class="section-head"><span>05</span><h2>Conventions de nommage</h2></div>
 <p class="section-intro">Le but est simple : reconnaître le type d'asset immédiatement dans le Content Browser et éviter les noms ambigus. Epic recommande une convention structurée basée sur un préfixe, un nom, un descripteur et éventuellement une variante.</p>
 <div class="exercise-card" style="margin-bottom:24px"><h3>Fiche visuelle du cours</h3><div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-naming-conventions.svg" alt="Conventions de nommage Unreal" style="display:block;width:100%;min-width:900px;height:auto"></div></div>
 <div class="definition"><strong>Format général</strong><p><code>[PREFIX]_[NOM]_[DESCRIPTEUR]_[VARIANTE]</code></p></div>
@@ -152,7 +184,7 @@
 </section>
 
 <section id="snap" class="section">
-<div class="section-head"><span>05</span><h2>Snap & manipulation</h2></div>
+<div class="section-head"><span>06</span><h2>Snap & manipulation</h2></div>
 <div class="key-grid">
 <div class="key-card"><h3>SNAP</h3><p>Active l'option de Snap pour faciliter le placement.</p></div>
 <div class="key-card"><h3>F</h3><p><span class="highlight">Focus / cadrage</span> sur l'objet sélectionné.</p></div>
@@ -163,7 +195,7 @@
 </section>
 
 <section id="raccourcis" class="section dark">
-<div class="section-head"><span>06</span><h2>Raccourcis indispensables</h2></div>
+<div class="section-head"><span>07</span><h2>Raccourcis indispensables</h2></div>
 <table class="revision-table">
 <thead><tr><th>Raccourci</th><th>Action</th><th>À retenir</th></tr></thead>
 <tbody>
@@ -191,7 +223,7 @@
 </section>
 
 <section id="ressources" class="section">
-<div class="section-head"><span>07</span><h2>Ressources & workflow</h2></div>
+<div class="section-head"><span>08</span><h2>Ressources & workflow</h2></div>
 <div class="resource-grid">
 <div class="resource-card"><div class="tag">MIXAMO</div><h3>Personnages & animations</h3><p>Télécharger un personnage et/ou des animations, puis organiser les assets dans Unreal avec une convention de nommage claire.</p><a class="exercise-button" href="https://www.mixamo.com/#/" target="_blank" rel="noopener">Ouvrir Mixamo →</a></div>
 <div class="resource-card"><div class="tag">CGTRADER</div><h3>Modèles 3D pour Unreal</h3><p>Rechercher un modèle compatible et vérifier avant import le format, le rig, les textures et les conditions d'utilisation.</p><a class="exercise-button" href="https://www.cgtrader.com/fr/3d-modeles/unreal-engine" target="_blank" rel="noopener">Voir les modèles Unreal →</a></div>
