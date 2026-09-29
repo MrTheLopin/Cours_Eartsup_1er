@@ -142,7 +142,32 @@
 </div>
 <div class="important"><strong>⭐ À retenir :</strong> <code>Update Animation → Try Get Pawn Owner → Get Velocity → Vector Length → Set Ground Speed</code>. La variable <code>Ground Speed</code> est un <span class="highlight">Float</span> qui pourra alimenter l’axe <code>Speed</code> du Blend Space 1D.</div>
 <div class="warning"><strong>⚠️ Mémo :</strong> <code>Velocity</code> est un vecteur ; <code>Vector Length</code> le convertit en valeur de vitesse. Exemple : <code>0</code> = Idle, vitesse intermédiaire = Walk, vitesse élevée = Run.</div>
+<div class="blueprint-item">
+<h3>05 · Transitions : IdleWalk → Falling → JumpEnd</h3>
+<p class="section-intro">Une fois <code>Ground Speed</code> et <code>Is Falling</code> disponibles, la State Machine peut gérer la chute et le retour vers les animations au sol.</p>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-animation-transitions.svg" alt="State Machine avec IdleWalk, Falling et JumpEnd" style="display:block;width:100%;height:auto"></div>
+<div class="course-steps">
+<div class="course-step"><div class="number">1</div><div><h3>IdleWalk → Falling</h3><p>La transition est autorisée lorsque <span class="highlight">Is Falling = true</span>.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>Falling → JumpEnd</h3><p>La logique de transition utilise la variable <span class="highlight">Is Falling</span> pour déterminer quand passer à l'état suivant.</p></div></div>
+<div class="course-step"><div class="number">3</div><div><h3>JumpEnd → IdleWalk</h3><p>La transition de retour est autorisée dans la capture fournie ; elle ramène le personnage vers l'état de déplacement au sol.</p></div></div>
 </div>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-animation-transition-rules.svg" alt="Règles des transitions de la State Machine" style="display:block;width:100%;height:auto"></div>
+<div class="important"><strong>⭐ À retenir :</strong> <code>Is Falling</code> est une variable <span class="highlight">Boolean</span> : <code>true</code> signifie que le personnage est en train de tomber ; <code>false</code> signifie qu'il n'est pas en chute.</div>
+</div>
+
+<div class="blueprint-item">
+<h3>06 · Calculer Is Falling dans l'Event Graph</h3>
+<p class="section-intro">Dans l'Event Graph de l'Animation Blueprint, on récupère le Character Movement puis on utilise <code>Is Falling</code> pour alimenter la variable booléenne du même nom.</p>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-animation-falling-eventgraph.svg" alt="Event Graph calculant Ground Speed et Is Falling" style="display:block;width:100%;height:auto"></div>
+<div class="course-steps">
+<div class="course-step"><div class="number">1</div><div><h3>Cast vers le Character</h3><p>Après <code>Try Get Pawn Owner</code>, faire le <strong>Cast To BP_ThirdPersonCharacter</strong> pour accéder au Character Movement.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>Récupérer Character Movement</h3><p>Depuis le Character, récupérer le composant <span class="highlight">Character Movement</span>.</p></div></div>
+<div class="course-step"><div class="number">3</div><div><h3>Tester Is Falling</h3><p>Appeler <code>Is Falling</code> sur le Character Movement et récupérer le résultat booléen.</p></div></div>
+<div class="course-step"><div class="number">4</div><div><h3>Set Is Falling</h3><p>Stocker le résultat dans la variable <span class="highlight">Is Falling</span> de l'Animation Blueprint.</p></div></div>
+</div>
+<div class="warning"><strong>⚠️ Important :</strong> <code>Ground Speed</code> et <code>Is Falling</code> sont deux informations différentes : la première pilote le déplacement dans le Blend Space, la seconde pilote les transitions de la State Machine.</div>
+</div>
+
 </div>
 </section>
 
