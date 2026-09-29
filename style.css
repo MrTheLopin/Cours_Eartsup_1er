@@ -3,3 +3,47 @@
 .exercise-document{margin-top:30px;background:#fff;padding:12px;overflow:auto}.exercise-image{display:block;width:100%;height:auto;max-height:none;object-fit:initial}.exercise-card{overflow:visible}
 
 .last-update{max-width:1180px;margin:18px auto 0;padding:9px 14px;border:1px solid #3f3f3f;background:#202020;color:#aaa;font-size:12px;letter-spacing:.04em;text-align:right}.last-update::before{content:"●";color:var(--accent);margin-right:8px}@media(max-width:520px){.last-update{margin:12px 6vw 0;font-size:11px;text-align:left}}
+
+/* Unreal course layout */
+.unreal-overview{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.unreal-stat{background:#191919;border:1px solid #3d3d3d;padding:24px}
+.unreal-stat .label{color:#aaa;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.unreal-stat strong{display:block;color:#fff;font-size:22px;margin-top:8px}
+.highlight{display:inline;padding:2px 7px;background:var(--accent);color:#151515;font-weight:900}
+.mark{color:var(--accent);font-weight:900}
+.important,.warning,.definition{max-width:1180px;margin:22px auto;padding:20px 24px;border-left:4px solid var(--accent);background:#202020}
+.important strong,.warning strong,.definition strong{color:#fff}
+.warning{border-left-color:#c9b48a}
+.warning strong{color:#f3eee4}
+.definition{background:#f3eee4;color:#171717;border-left-color:#171717}
+.definition p,.definition code{color:#171717}
+.course-steps{display:grid;gap:14px;max-width:1180px;margin:auto}
+.course-step{display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:start;padding:20px 22px;background:#191919;border:1px solid #383838}
+.course-step .number{width:38px;height:38px;display:grid;place-items:center;background:var(--accent);color:#171717;font-weight:900}
+.course-step h3{margin:0 0 5px;color:#fff;font-size:20px}
+.course-step p{margin:0}
+.key-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1180px;margin:auto}
+.key-card{padding:20px;background:#191919;border:1px solid #383838}
+.key-card h3{color:#fff;font-size:19px;margin:0 0 8px}
+.key-card code{color:#f3eee4;font-weight:800}
+.naming-table{width:100%;max-width:1180px;margin:auto;border-collapse:collapse;background:#191919;color:#ddd}
+.naming-table th,.naming-table td{padding:15px 18px;border-bottom:1px solid #393939;text-align:left}
+.naming-table th{color:#f3eee4;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.naming-table code{color:#fff;font-weight:800}
+.quick-sheet{max-width:1180px;margin:28px auto 0;padding:24px;background:#f3eee4;color:#171717}
+.quick-sheet h3{margin-top:0;color:#171717}
+.quick-sheet p,.quick-sheet li{color:#333}
+.quick-sheet code{font-weight:800;color:#171717}
+.section-intro{max-width:760px;margin:-15px 0 35px}
+.section-intro p{font-size:16px}
+.resource-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.resource-card{background:#191919;border:1px solid #3d3d3d;padding:26px}
+.resource-card h3{color:#fff;margin-top:0}
+.resource-card p{margin-bottom:20px}
+.blueprint-list{display:grid;gap:24px;max-width:1180px;margin:auto}
+.blueprint-item{border:1px solid #454545;background:#191919;padding:28px}
+.blueprint-item h3{color:#fff;margin-top:0}
+.blueprint-item ol{color:#ddd;padding-left:22px}
+.blueprint-item li{margin:8px 0}
+@media(max-width:800px){.unreal-overview,.key-grid,.resource-grid{grid-template-columns:1fr 1fr}.naming-table{font-size:14px}.naming-table th,.naming-table td{padding:12px}}
+@media(max-width:520px){.unreal-overview,.key-grid,.resource-grid{grid-template-columns:1fr}.course-step{grid-template-columns:40px 1fr;padding:16px}.naming-table{display:block;overflow:auto;white-space:nowrap}.important,.warning,.definition{padding:16px 18px}}
