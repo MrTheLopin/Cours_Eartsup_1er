@@ -47,3 +47,16 @@
 .blueprint-item li{margin:8px 0}
 @media(max-width:800px){.unreal-overview,.key-grid,.resource-grid{grid-template-columns:1fr 1fr}.naming-table{font-size:14px}.naming-table th,.naming-table td{padding:12px}}
 @media(max-width:520px){.unreal-overview,.key-grid,.resource-grid{grid-template-columns:1fr}.course-step{grid-template-columns:40px 1fr;padding:16px}.naming-table{display:block;overflow:auto;white-space:nowrap}.important,.warning,.definition{padding:16px 18px}}
+
+
+/* Unreal revision tables */
+.revision-table{width:100%;max-width:1180px;margin:0 auto;border-collapse:collapse;background:#191919;color:#ddd;border:1px solid #383838}
+.revision-table th,.revision-table td{padding:16px 18px;border-bottom:1px solid #393939;text-align:left;vertical-align:middle}
+.revision-table th{background:#202020;color:#f3eee4;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.revision-table tr:last-child td{border-bottom:0}
+.revision-table td:first-child{font-weight:800;color:#fff;white-space:nowrap}
+.revision-table code,.revision-table kbd{color:#fff;font-weight:800}
+.revision-table kbd{display:inline-block;background:#f3eee4;color:#171717;border:1px solid #d8d2c8;padding:5px 9px;font-family:inherit;font-size:12px}
+.revision-table .highlight{display:inline-block}
+@media(max-width:800px){.revision-table{font-size:14px}.revision-table th,.revision-table td{padding:12px 13px}}
+@media(max-width:520px){.revision-table{display:block;overflow:auto;white-space:nowrap}.revision-table th,.revision-table td{padding:11px 12px}}
