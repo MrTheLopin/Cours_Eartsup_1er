@@ -136,8 +136,58 @@
 </div>
 </section>
 
+<section id="blendspace" class="section">
+<div class="section-head"><span>04</span><h2>Blend Space 1D & déplacement</h2></div>
+<p class="section-intro">Pour un déplacement uniquement <strong>avant / arrière</strong>, on utilise un <span class="highlight">Blend Space 1D</span> piloté par une seule valeur : <code>Speed</code>. Epic décrit le Blend Space 1D comme un système de mélange basé sur un seul axe. citeturn0search1turn0search4</p>
+
+<div class="blueprint-list">
+<div class="blueprint-item">
+<h3>01 · Créer le Blend Space 1D</h3>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-animation-04-blendspace1d.svg" alt="Création et réglage d'un Blend Space 1D avec Speed" style="display:block;width:100%;height:auto"></div>
+<div class="course-steps">
+<div class="course-step"><div class="number">1</div><div><h3>Créer le BS</h3><p>Dans le dossier <strong>Animation</strong> : <code>Animation → Legacy → Blend Space 1D</code>.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>Nommer l'axe</h3><p>Dans <strong>Asset Details → Axis Settings</strong>, nommer l'axe <span class="highlight">Speed</span>.</p></div></div>
+<div class="course-step"><div class="number">3</div><div><h3>Définir le Maximum Axis Value</h3><p>Mettre le <span class="highlight">Maximum Axis Value</span> à la valeur correspondant à la vitesse maximale de ton Character Movement, notamment <code>Max Walk Speed</code>.</p></div></div>
+<div class="course-step"><div class="number">4</div><div><h3>Ajouter les animations</h3><p>Placer les animations de déplacement sur l'axe : arrière, Idle si nécessaire, puis avant.</p></div></div>
+</div>
+<div class="important"><strong>⭐ À retenir :</strong> le <span class="highlight">Maximum Axis Value</span> sert de limite haute de l'entrée de l'axe. Il doit être cohérent avec les valeurs de vitesse utilisées par ton personnage. citeturn0search2</div>
+</div>
+
+<div class="blueprint-item">
+<h3>02 · Remplacer l'animation Idle par le Blend Space</h3>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-animation-05-blendspace-idle.svg" alt="Remplacer l'animation Idle par le Blend Space" style="display:block;width:100%;height:auto"></div>
+<div class="course-steps">
+<div class="course-step"><div class="number">1</div><div><h3>Supprimer l'ancienne animation</h3><p>Dans le State <code>Idle</code>, supprimer le <code>Sequence Player</code> de l'ancienne animation.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>Ajouter le Blend Space</h3><p>Glisser <span class="highlight">BS_IdleWalk</span> dans le State.</p></div></div>
+<div class="course-step"><div class="number">3</div><div><h3>Relier la sortie</h3><p>Relier le <code>Blend Space Player</code> à <code>Output Animation Pose</code>.</p></div></div>
+</div>
+<div class="important"><strong>⭐ À retenir :</strong> le Blend Space devient maintenant la source de la pose du State <span class="highlight">Idle</span> et son entrée <code>Speed</code> servira à choisir / mélanger les animations.</div>
+</div>
+
+<div class="blueprint-item">
+<h3>03 · Mesh & Character Movement</h3>
+<div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-animation-06-character-movement.svg" alt="Remplacer le Mesh et consulter Character Movement" style="display:block;width:100%;height:auto"></div>
+<div class="course-steps">
+<div class="course-step"><div class="number">1</div><div><h3>Remplacer le Mesh</h3><p>Dans le Character, sélectionner le <strong>Skeletal Mesh</strong> que tu viens d'importer.</p></div></div>
+<div class="course-step"><div class="number">2</div><div><h3>Ouvrir Character Movement</h3><p>Dans la liste des composants à gauche, sélectionner <span class="highlight">Character Movement</span>, puis regarder le panneau <strong>Details</strong>.</p></div></div>
+<div class="course-step"><div class="number">3</div><div><h3>Ouvrir Walking</h3><p>Dans <strong>Details → Character Movement: Walking</strong>, récupérer les valeurs utiles au déplacement.</p></div></div>
+</div>
+<table class="revision-table">
+<thead><tr><th>Valeur</th><th>Rôle</th><th>Pourquoi la noter</th></tr></thead>
+<tbody>
+<tr><td><code>Max Walk Speed</code></td><td>Vitesse maximale au sol</td><td><span class="highlight">Référence principale pour le Maximum Axis Value</span></td></tr>
+<tr><td><code>Max Acceleration</code></td><td>Accélération maximale</td><td>Permet de comprendre la montée en vitesse</td></tr>
+<tr><td><code>Braking Deceleration Walking</code></td><td>Décélération à pied sans accélération</td><td>Influence le ralentissement du personnage</td></tr>
+<tr><td><code>Ground Friction</code></td><td>Friction au sol</td><td>Influence le comportement lors du déplacement / freinage</td></tr>
+</tbody>
+</table>
+<div class="warning"><strong>⚠️ Important :</strong> <code>Max Walk Speed</code> correspond à la vitesse maximale au sol du Character Movement. C'est donc la valeur à vérifier en priorité pour régler l'échelle de <code>Speed</code>. citeturn0search8turn1search0</div>
+</div>
+</div>
+</section>
+
 <section id="variables" class="section">
-<div class="section-head"><span>04</span><h2>Types de variables</h2></div>
+<div class="section-head"><span>05</span><h2>Types de variables</h2></div>
 <p class="section-intro">Une variable stocke une valeur ou une référence. Unreal propose plusieurs types de données ; les principaux types sont identifiables visuellement dans les Blueprints.</p>
 <table class="revision-table">
 <thead><tr><th>Type</th><th>Valeur / exemple</th><th>À quoi ça sert</th><th>Mémo</th></tr></thead>
@@ -156,7 +206,7 @@
 </section>
 
 <section id="naming" class="section dark">
-<div class="section-head"><span>05</span><h2>Conventions de nommage</h2></div>
+<div class="section-head"><span>06</span><h2>Conventions de nommage</h2></div>
 <p class="section-intro">Le but est simple : reconnaître le type d'asset immédiatement dans le Content Browser et éviter les noms ambigus. Epic recommande une convention structurée basée sur un préfixe, un nom, un descripteur et éventuellement une variante.</p>
 <div class="exercise-card" style="margin-bottom:24px"><h3>Fiche visuelle du cours</h3><div style="margin:20px 0;background:#101214;padding:12px;border-radius:14px;overflow:auto"><img src="assets/unreal-naming-conventions.svg" alt="Conventions de nommage Unreal" style="display:block;width:100%;min-width:900px;height:auto"></div></div>
 <div class="definition"><strong>Format général</strong><p><code>[PREFIX]_[NOM]_[DESCRIPTEUR]_[VARIANTE]</code></p></div>
@@ -184,7 +234,7 @@
 </section>
 
 <section id="snap" class="section">
-<div class="section-head"><span>06</span><h2>Snap & manipulation</h2></div>
+<div class="section-head"><span>07</span><h2>Snap & manipulation</h2></div>
 <div class="key-grid">
 <div class="key-card"><h3>SNAP</h3><p>Active l'option de Snap pour faciliter le placement.</p></div>
 <div class="key-card"><h3>F</h3><p><span class="highlight">Focus / cadrage</span> sur l'objet sélectionné.</p></div>
@@ -195,7 +245,7 @@
 </section>
 
 <section id="raccourcis" class="section dark">
-<div class="section-head"><span>07</span><h2>Raccourcis indispensables</h2></div>
+<div class="section-head"><span>08</span><h2>Raccourcis indispensables</h2></div>
 <table class="revision-table">
 <thead><tr><th>Raccourci</th><th>Action</th><th>À retenir</th></tr></thead>
 <tbody>
@@ -223,7 +273,7 @@
 </section>
 
 <section id="ressources" class="section">
-<div class="section-head"><span>08</span><h2>Ressources & workflow</h2></div>
+<div class="section-head"><span>09</span><h2>Ressources & workflow</h2></div>
 <div class="resource-grid">
 <div class="resource-card"><div class="tag">MIXAMO</div><h3>Personnages & animations</h3><p>Télécharger un personnage et/ou des animations, puis organiser les assets dans Unreal avec une convention de nommage claire.</p><a class="exercise-button" href="https://www.mixamo.com/#/" target="_blank" rel="noopener">Ouvrir Mixamo →</a></div>
 <div class="resource-card"><div class="tag">CGTRADER</div><h3>Modèles 3D pour Unreal</h3><p>Rechercher un modèle compatible et vérifier avant import le format, le rig, les textures et les conditions d'utilisation.</p><a class="exercise-button" href="https://www.cgtrader.com/fr/3d-modeles/unreal-engine" target="_blank" rel="noopener">Voir les modèles Unreal →</a></div>
