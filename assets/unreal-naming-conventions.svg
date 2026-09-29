@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900">
+<rect width="1400" height="900" fill="#101214"/>
+<text x="70" y="70" fill="#f3eee4" font-family="Arial,sans-serif" font-size="40" font-weight="700">Unreal — Naming Conventions</text>
+<text x="70" y="105" fill="#aaa" font-family="Arial,sans-serif" font-size="19">Préfixe du type d’asset → nom clair → descripteur / variante</text>
+<rect x="60" y="145" width="1280" height="330" rx="18" fill="#171a1d" stroke="#45484c"/>
+<text x="90" y="190" fill="#f3eee4" font-family="Arial,sans-serif" font-size="25" font-weight="700">Conventions du cours</text>
+<g font-family="Arial,sans-serif" font-size="20" fill="#ddd">
+<text x="100" y="235">Skeletal Mesh</text><text x="570" y="235" fill="#f3eee4" font-weight="700">SKM_</text><text x="820" y="235" fill="#aaa">SKM_YBot</text>
+<text x="100" y="275">Static Mesh</text><text x="570" y="275" fill="#f3eee4" font-weight="700">SM_</text><text x="820" y="275" fill="#aaa">SM_Rock</text>
+<text x="100" y="315">Material</text><text x="570" y="315" fill="#f3eee4" font-weight="700">M_</text><text x="820" y="315" fill="#aaa">M_Metal</text>
+<text x="100" y="355">Material Instance</text><text x="570" y="355" fill="#f3eee4" font-weight="700">MI_</text><text x="820" y="355" fill="#aaa">MI_Alpha_Body</text>
+<text x="100" y="395">Texture</text><text x="570" y="395" fill="#f3eee4" font-weight="700">T_</text><text x="820" y="395" fill="#aaa">T_Alpha_Body_BaseColor</text>
+<text x="100" y="435">Blueprint</text><text x="570" y="435" fill="#f3eee4" font-weight="700">BP_</text><text x="820" y="435" fill="#aaa">BP_ThirdPersonGameMode</text>
+</g>
+<rect x="60" y="505" width="620" height="320" rx="18" fill="#171a1d" stroke="#45484c"/>
+<text x="90" y="550" fill="#f3eee4" font-family="Arial,sans-serif" font-size="25" font-weight="700">Exemples Content Browser</text>
+<g font-family="Arial,sans-serif" font-size="19" fill="#ddd">
+<text x="100" y="600">Alpha_Body_MAT</text><text x="100" y="632" fill="#aaa">Material Instance</text>
+<text x="100" y="680">Alpha_Joints_MAT</text><text x="100" y="712" fill="#aaa">Material Instance</text>
+<text x="100" y="760">PA_YBot  → Physics Asset</text>
+<text x="100" y="792">SK_YBot  → Skeleton</text>
+<text x="360" y="792">SKM_YBot → Skeletal Mesh</text>
+</g>
+<rect x="710" y="505" width="630" height="320" rx="18" fill="#171a1d" stroke="#45484c"/>
+<text x="740" y="550" fill="#f3eee4" font-family="Arial,sans-serif" font-size="25" font-weight="700">Animations</text>
+<text x="740" y="605" fill="#ddd" font-family="Arial,sans-serif" font-size="20">Exemple vu dans l’Animation Editor :</text>
+<text x="740" y="655" fill="#f3eee4" font-family="Arial,sans-serif" font-size="27" font-weight="700">Warrior_Idle__1_</text>
+<text x="740" y="710" fill="#aaa" font-family="Arial,sans-serif" font-size="18">Pour un projet propre, utiliser des noms</text>
+<text x="740" y="740" fill="#aaa" font-family="Arial,sans-serif" font-size="18">d’animations explicites : Idle, Walk, Run, Jump…</text>
+<text x="740" y="790" fill="#f3eee4" font-family="Arial,sans-serif" font-size="18">AS_ / AM_ / BS_ peuvent être utilisés</text>
+<text x="740" y="815" fill="#f3eee4" font-family="Arial,sans-serif" font-size="18">selon le type d’asset et la convention choisie.</text>
+</svg>
