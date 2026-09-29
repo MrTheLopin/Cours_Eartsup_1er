@@ -60,3 +60,19 @@
 .revision-table .highlight{display:inline-block}
 @media(max-width:800px){.revision-table{font-size:14px}.revision-table th,.revision-table td{padding:12px 13px}}
 @media(max-width:520px){.revision-table{display:block;overflow:auto;white-space:nowrap}.revision-table th,.revision-table td{padding:11px 12px}}
+
+
+/* Séparateurs visuels — page Unreal */
+main > .section{position:relative}
+main > .section + .section{border-top:1px solid #c9c3ba}
+main > .dark.section + .section{border-top-color:#c9c3ba}
+main > .section + .section::before{content:"";position:absolute;top:-2px;left:6vw;width:70px;height:3px;background:var(--accent)}
+.section-head{position:relative;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.dark .section-head{border-bottom-color:#3b3b3b}
+.section-head::after{content:"";position:absolute;left:0;bottom:-1px;width:34%;max-width:260px;height:2px;background:var(--accent)}
+.blueprint-item + .blueprint-item{border-top:3px solid #4a4a4a}
+.key-card + .key-card{border-left-color:#4a4a4a}
+.revision-table tr + tr td{border-top:1px solid #303030}
+.important,.warning,.definition{position:relative}
+.important::before,.warning::before,.definition::before{content:"";position:absolute;top:-1px;right:24px;width:46px;height:2px;background:var(--accent)}
+@media(max-width:520px){main > .section + .section::before{left:6vw;width:48px}.section-head::after{width:45%}}
