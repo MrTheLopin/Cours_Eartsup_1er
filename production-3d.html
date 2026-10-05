@@ -47,8 +47,36 @@
 <div class="shortcut"><kbd>G</kbd><span>Déplacer l’objet</span></div><div class="shortcut"><kbd>G + X</kbd><span>Déplacer sur l’axe X</span></div><div class="shortcut"><kbd>G + Y</kbd><span>Déplacer sur l’axe Y</span></div><div class="shortcut"><kbd>G + Z</kbd><span>Déplacer sur l’axe Z</span></div><div class="shortcut"><kbd>S</kbd><span>Modifier la taille (Scale)</span></div><div class="shortcut"><kbd>R</kbd><span>Rotation</span></div><div class="shortcut"><kbd>Shift + A</kbd><span>Ouvrir le menu Ajouter</span></div><div class="shortcut"><kbd>X</kbd><span>Supprimer l’objet</span></div><div class="shortcut"><kbd>Tab</kbd><span>Changer de mode</span></div><div class="shortcut"><kbd>W</kbd><span>Changer le mode de sélection</span></div><div class="shortcut"><kbd>Shift + C</kbd><span>Recentrer la vue et le 3D Cursor</span></div><div class="shortcut"><kbd>T</kbd><span>Afficher / masquer la Toolbar</span></div><div class="shortcut"><kbd>N</kbd><span>Afficher / masquer le panneau Transform</span></div><div class="shortcut"><kbd>Shift + MMB</kbd><span>Déplacer la vue horizontalement / verticalement</span></div><div class="shortcut"><kbd>Clic sur Scene Collection + .</kbd><span>Cadrer / rediriger la vue sur l’objet sélectionné</span></div><div class="shortcut"><kbd>Ctrl + R</kbd><span>Ajouter une boucle de découpe (Loop Cut)</span></div><div class="shortcut"><kbd>Alt + H</kbd><span>Afficher les meshes cachés</span></div><div class="shortcut"><kbd>L</kbd><span>Sélectionner le mesh sous le curseur</span></div><div class="shortcut"><kbd>G + clic molette</kbd><span>Snaper / contraindre selon le geste</span></div><div class="shortcut"><kbd>Ctrl + Alt + Z</kbd><span>Annuler / revenir en arrière</span></div><div class="shortcut"><kbd>Object → Set Origin → Origin to Geometry</kbd><span>Placer l’origine au centre de la géométrie</span></div>
 </div></section>
 
+<section id="modelisation-edit" class="section">
+<div class="section-head"><span>05</span><h2>Edit Mode — Modélisation des arêtes</h2></div>
+<div class="section-intro"><p>Fiche pratique pour travailler les <strong>arêtes</strong> et préparer une modélisation propre à partir d'une référence technique. Les outils ci-dessous servent notamment à découper, supprimer, arrondir et contrôler la géométrie.</p></div>
+
+<div class="course-steps">
+<div class="course-step"><div class="number">1</div><div><h3>Passer en Edit Mode + Edge Select</h3><p><code>Tab</code> → passer en <strong>Edit Mode</strong>, puis <code>2</code> (touche <strong>É / é</strong> sur clavier AZERTY) pour passer en sélection des <strong>arêtes</strong>. Sélectionner ensuite toutes les arêtes avec <code>A</code>.</p></div></div>
+
+<div class="course-step"><div class="number">2</div><div><h3>Changer le mode de sélection / snapping</h3><p><code>Shift + Tab</code> permet d'activer ou désactiver le <strong>snapping</strong> dans Blender. Utilise-le lorsque tu veux contrôler précisément l'accrochage pendant les manipulations.</p></div></div>
+
+<div class="course-step"><div class="number">3</div><div><h3>Découpe entre deux points</h3><p>Sélectionner <strong>2 points / sommets</strong>, puis utiliser <code>J</code> pour créer une <strong>connexion / découpe entre les deux</strong> lorsque la topologie le permet.</p></div></div>
+
+<div class="course-step"><div class="number">4</div><div><h3>Dissolve Edges</h3><p>Sélectionner les arêtes à retirer, puis utiliser <strong>Edge → Dissolve Edges</strong>. Cela supprime les arêtes sélectionnées sans supprimer la surface comme le ferait une suppression classique.</p></div></div>
+
+<div class="course-step"><div class="number">5</div><div><h3>Bevel — arrondir les arêtes</h3><p><code>Ctrl + B</code> lance le <strong>Bevel</strong> en Edit Mode. Déplacer la souris pour régler la largeur du chanfrein, puis utiliser la <strong>molette</strong> pour choisir le nombre de segments / angles avant de cliquer pour valider.</p></div></div>
+
+<div class="course-step"><div class="number">6</div><div><h3>Ctrl + R — Loop Cut</h3><p><code>Ctrl + R</code> ajoute une <strong>Loop Cut</strong> sur le mesh. Place le curseur sur la géométrie, prévisualise la coupe, clique pour la placer puis ajuste sa position.</p></div></div>
+</div>
+
+<div class="important"><strong>⭐ À retenir :</strong> <code>J</code> sert à connecter des sommets, <code>Dissolve Edges</code> permet de simplifier la topologie sans casser les faces, et <code>Ctrl + B</code> permet de créer un chanfrein / arrondi sur les arêtes.</div>
+
+<div class="warning"><strong>⚠️ Correction importante :</strong> dans Blender, <code>Ctrl + R</code> correspond à <strong>Loop Cut</strong>, pas à « revenir en arrière ». Pour annuler une action, utilise <code>Ctrl + Z</code>. La touche <code>P</code> n'est pas un raccourci universel pour « changer le level » : son action dépend du contexte / outil utilisé.</div>
+
+<div class="resource-card" style="max-width:1180px;margin:24px auto 0">
+<h3>Référence technique Apple</h3>
+<p>Les <strong>Dimensional Drawings</strong> d'Apple fournissent des dessins cotés et spécifications techniques utiles comme référence pour un exercice de modélisation.</p>
+<p><a class="button" href="https://developer.apple.com/accessories/dimensional-drawings/" target="_blank" rel="noopener noreferrer">Ouvrir les Dimensional Drawings Apple →</a></p>
+</div>
+</section>
 <section id="exercices" class="section dark"><div class="section-head"><span>05</span><h2>Exercices</h2></div><div class="exercise-card"><div><span class="tag">EXERCICE 01</span><h3>Analyse d'une planche technique</h3><p>Planche de référence d'un iPhone 17 Pro : vues orthographiques, détails, cotes et indications techniques. Utilise ce document comme référence pour un exercice de modélisation 3D.</p></div><div class="exercise-document"><img class="exercise-image" src="assets/iphone-17-pro-planche.webp" alt="Planche technique iPhone 17 Pro — 62.5 iPhone 17 Pro, 1 of 4"></div></div></section>
-<section class="section tips"><div class="section-head"><span>06</span><h2>À retenir</h2></div><div class="tips-grid"><div><strong>Transform par défaut</strong><p>Rotation : <code>0°</code> · Scale : <code>1</code> · Les dimensions dépendent de l’objet.</p></div><div><strong>Navigation</strong><p>La molette, le clic molette et les combinaisons avec Shift/Ctrl permettent de naviguer dans la vue.</p></div><div><strong>LoopTools</strong><p>Add-on utile pour enrichir les outils de modélisation. À activer depuis Preferences → Add-ons.</p></div><div><strong>Network</strong><p>Edit → Preferences → Network → <b>Allow Online Access</b>, si nécessaire pour les fonctions en ligne.</p></div></div></section>
+<section class="section tips"><div class="section-head"><span>07</span><h2>À retenir</h2></div><div class="tips-grid"><div><strong>Transform par défaut</strong><p>Rotation : <code>0°</code> · Scale : <code>1</code> · Les dimensions dépendent de l’objet.</p></div><div><strong>Navigation</strong><p>La molette, le clic molette et les combinaisons avec Shift/Ctrl permettent de naviguer dans la vue.</p></div><div><strong>LoopTools</strong><p>Add-on utile pour enrichir les outils de modélisation. À activer depuis Preferences → Add-ons.</p></div><div><strong>Network</strong><p>Edit → Preferences → Network → <b>Allow Online Access</b>, si nécessaire pour les fonctions en ligne.</p></div></div></section>
 </main>
 <footer><span>PRODUCTION 3D · BLENDER · E-ARTSUP</span><span>Version de travail — contenu à enrichir</span></footer>
 <script src="script.js"></script>
