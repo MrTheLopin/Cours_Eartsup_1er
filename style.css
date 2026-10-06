@@ -97,3 +97,14 @@ main > .section + .section::before{content:"";position:absolute;top:-2px;left:6v
   body.sidebar-open .course-sidebar{transform:translateX(0)}
   .course-sidebar-toggle{display:grid;place-items:center;position:fixed;z-index:60;left:14px;bottom:18px;width:48px;height:48px;border:1px solid #555;background:#f3eee4;color:#171717;font-size:20px;font-weight:900;box-shadow:0 8px 25px rgba(0,0,0,.3)}
 }
+
+
+/* Emploi du temps de la page d'accueil */
+.timetable{max-width:1400px;margin:auto;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#b9b9b9;border:1px solid #aaa}
+.timetable-day{background:#e4e4e4;min-height:520px;display:flex;flex-direction:column;gap:1px}
+.timetable-day-head{height:58px;display:flex;align-items:center;justify-content:center;background:#d3d3d3;color:#303030;font-size:12px;font-weight:900;letter-spacing:.14em;border-bottom:1px solid #aaa}
+.timetable-card{margin:0 8px;padding:24px 16px;min-height:145px;display:flex;flex-direction:column;justify-content:center;text-decoration:none;color:#171717;border-left:4px solid #777;transition:transform .2s,filter .2s}
+.timetable-card:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.timetable-card span{font-size:10px;font-weight:900;letter-spacing:.08em;margin-bottom:8px}.timetable-card strong{font-size:16px;line-height:1.25}.timetable-card.production3d{background:#d49e82}.timetable-card.unreal{background:#9cc8bd}.timetable-card.production-image{background:#c5b99d}.timetable-card.volume{background:#c8b99b}.timetable-card.popculture{background:#9dbbd0}.timetable-card.presenter{background:#b5d28c}.timetable-card.couleur{background:#94c7ba}.timetable-empty{margin:8px;padding:18px;border:1px dashed #aaa;color:#777;text-align:center;font-size:12px}
+@media(max-width:900px){.timetable{grid-template-columns:repeat(2,1fr)}.timetable-day{min-height:300px}}
+@media(max-width:520px){.timetable{grid-template-columns:1fr}.timetable-day{min-height:auto}.timetable-day-head{height:48px}}
