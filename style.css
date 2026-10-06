@@ -108,3 +108,24 @@ main > .section + .section::before{content:"";position:absolute;top:-2px;left:6v
 .timetable-card span{font-size:10px;font-weight:900;letter-spacing:.08em;margin-bottom:8px}.timetable-card strong{font-size:16px;line-height:1.25}.timetable-card.production3d{background:#d49e82}.timetable-card.unreal{background:#9cc8bd}.timetable-card.production-image{background:#c5b99d}.timetable-card.volume{background:#c8b99b}.timetable-card.popculture{background:#9dbbd0}.timetable-card.presenter{background:#b5d28c}.timetable-card.couleur{background:#94c7ba}.timetable-empty{margin:8px;padding:18px;border:1px dashed #aaa;color:#777;text-align:center;font-size:12px}
 @media(max-width:900px){.timetable{grid-template-columns:repeat(2,1fr)}.timetable-day{min-height:300px}}
 @media(max-width:520px){.timetable{grid-template-columns:1fr}.timetable-day{min-height:auto}.timetable-day-head{height:48px}}
+
+/* Refonte nette de l'emploi du temps d'accueil */
+#matieres{max-width:none;width:100%;padding-left:4vw;padding-right:4vw}
+#matieres .section-head{max-width:1400px;margin-left:auto;margin-right:auto}
+#matieres .timetable{width:100%;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;background:#aaa;border:1px solid #aaa}
+#matieres .timetable-day{background:#dedede;min-height:560px;display:flex;flex-direction:column;gap:2px}
+#matieres .timetable-day-head{height:64px;flex:0 0 64px;display:flex;align-items:center;justify-content:center;background:#cfcfcf;color:#222;font-size:13px;font-weight:900;letter-spacing:.16em;border-bottom:1px solid #aaa}
+#matieres .timetable-card{margin:0 10px;padding:26px 20px;min-height:170px;display:flex;flex-direction:column;justify-content:center;text-decoration:none!important;color:#171717!important;border:0;border-left:5px solid rgba(23,23,23,.25);transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
+#matieres .timetable-card:hover{transform:translateY(-3px);filter:brightness(1.04);box-shadow:0 8px 18px rgba(0,0,0,.12)}
+#matieres .timetable-card span{display:block;font-size:10px;font-weight:900;letter-spacing:.1em;margin-bottom:9px;color:#333!important}
+#matieres .timetable-card strong{display:block;font-size:18px;line-height:1.25;color:#171717!important}
+#matieres .timetable-card.production3d{background:#d49e82}
+#matieres .timetable-card.unreal{background:#9cc8bd}
+#matieres .timetable-card.production-image{background:#c5b99d}
+#matieres .timetable-card.volume{background:#c8b99b}
+#matieres .timetable-card.popculture{background:#9dbbd0}
+#matieres .timetable-card.presenter{background:#b5d28c}
+#matieres .timetable-card.couleur{background:#94c7ba}
+#matieres .timetable-empty{margin:10px;padding:24px 16px;border:1px dashed #aaa;background:#e8e8e8;color:#777;text-align:center;font-size:12px}
+@media(max-width:900px){#matieres{padding-left:5vw;padding-right:5vw}#matieres .timetable{grid-template-columns:repeat(2,minmax(0,1fr))}#matieres .timetable-day{min-height:360px}}
+@media(max-width:520px){#matieres{padding-left:6vw;padding-right:6vw}#matieres .timetable{grid-template-columns:1fr}#matieres .timetable-day{min-height:auto}#matieres .timetable-day-head{height:52px;flex-basis:52px}}
