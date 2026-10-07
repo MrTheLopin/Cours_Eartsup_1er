@@ -3,23 +3,42 @@
   <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <radialGradient id="g"><stop offset="0" stop-color="#f3eee4"/><stop offset=".35" stop-color="#f3eee4" stop-opacity=".8"/><stop offset="1" stop-color="#f3eee4" stop-opacity="0"/></radialGradient>
 </defs>
+<style>
+  .links{fill:none;stroke:#f3eee4;stroke-opacity:.3;stroke-width:1.5}
+  .pulse{fill:none;stroke:#f3eee4;stroke-opacity:.8;stroke-width:2;stroke-dasharray:2 70;stroke-linecap:round;animation:flow 4s linear infinite}
+  .node{fill:#f3eee4;filter:url(#glow);animation:nodePulse 3s ease-in-out infinite}
+  .node:nth-child(2n){animation-delay:.45s}.node:nth-child(3n){animation-delay:.9s}.node:nth-child(4n){animation-delay:1.35s}
+  @keyframes flow{to{stroke-dashoffset:-72}}
+  @keyframes nodePulse{0%,100%{opacity:.65;transform:scale(1)}50%{opacity:1;transform:scale(1.35)}}
+  .wave{fill:none;stroke:#f3eee4;stroke-width:1;opacity:0;animation:wave 3.2s ease-out infinite}
+  @keyframes wave{0%{opacity:.55;stroke-width:1}100%{opacity:0;stroke-width:8}}
+</style>
 <rect width="620" height="420" fill="#171717"/>
-<g fill="none" stroke="#f3eee4" stroke-opacity=".34" stroke-width="1.5">
+<g class="links">
   <path d="M88 246L145 154L220 198L285 112L355 166L430 104L505 178L556 120"/>
   <path d="M88 246L172 306L250 270L328 318L404 254L492 294L556 236"/>
   <path d="M145 154L172 306M220 198L250 270M285 112L328 318M355 166L404 254M430 104L492 294M505 178L556 236"/>
   <path d="M145 154L285 112M220 198L355 166M355 166L505 178M250 270L404 254M404 254L492 294"/>
 </g>
-<g fill="#f3eee4" filter="url(#glow)">
+<g class="pulse">
+  <path d="M88 246L145 154L220 198L285 112L355 166L430 104L505 178L556 120"/>
+  <path d="M88 246L172 306L250 270L328 318L404 254L492 294L556 236"/>
+</g>
+<g class="node">
   <circle cx="88" cy="246" r="4"/><circle cx="145" cy="154" r="5"/><circle cx="220" cy="198" r="3.5"/>
   <circle cx="285" cy="112" r="5"/><circle cx="355" cy="166" r="4"/><circle cx="430" cy="104" r="3.5"/>
   <circle cx="505" cy="178" r="5"/><circle cx="556" cy="120" r="3.5"/><circle cx="172" cy="306" r="4"/>
   <circle cx="250" cy="270" r="5"/><circle cx="328" cy="318" r="3.5"/><circle cx="404" cy="254" r="5"/>
   <circle cx="492" cy="294" r="4"/><circle cx="556" cy="236" r="5"/>
 </g>
-<g fill="url(#g)" opacity=".7">
- <circle cx="285" cy="112" r="28"><animate attributeName="r" values="18;34;18" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".2;.8;.2" dur="3s" repeatCount="indefinite"/></circle>
- <circle cx="404" cy="254" r="22"><animate attributeName="r" values="14;30;14" dur="2.6s" begin=".7s" repeatCount="indefinite"/><animate attributeName="opacity" values=".2;.7;.2" dur="2.6s" begin=".7s" repeatCount="indefinite"/></circle>
+<g fill="none" stroke="#f3eee4">
+  <circle class="wave" cx="285" cy="112" r="12"/>
+  <circle class="wave" cx="404" cy="254" r="10" style="animation-delay:.8s"/>
+  <circle class="wave" cx="145" cy="154" r="9" style="animation-delay:1.6s"/>
+</g>
+<g fill="url(#g)" opacity=".55">
+ <circle cx="285" cy="112" r="24"><animate attributeName="r" values="16;34;16" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".2;.8;.2" dur="3s" repeatCount="indefinite"/></circle>
+ <circle cx="404" cy="254" r="20"><animate attributeName="r" values="12;30;12" dur="2.6s" begin=".7s" repeatCount="indefinite"/><animate attributeName="opacity" values=".2;.7;.2" dur="2.6s" begin=".7s" repeatCount="indefinite"/></circle>
 </g>
 <g fill="#f3eee4" font-family="Inter,Arial,sans-serif" font-size="9" letter-spacing="2" opacity=".55">
  <text x="30" y="45">COGNITIVE NETWORK</text><text x="475" y="390">12 / 12</text>
