@@ -17,3 +17,12 @@ main > .section{position:relative}main > .section + .section{border-top:1px soli
 .cognitive-visual{flex:0 0 auto;width:100%;height:270px;min-height:270px;aspect-ratio:auto}
 @media(max-width:800px){.cognitive-visual{height:240px;min-height:240px}}
 @media(max-width:520px){.cognitive-visual{height:210px;min-height:210px}.blender-card{gap:16px}}
+
+/* Correctif definitif carte cerveau : separation stricte image / texte */
+.hero-grid .blender-card{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:28px!important;padding:24px!important;overflow:visible!important}
+.hero-grid .blender-card .cognitive-visual{display:block!important;position:relative!important;flex:none!important;width:100%!important;height:240px!important;min-height:240px!important;aspect-ratio:auto!important;overflow:hidden!important}
+.hero-grid .blender-card .cognitive-visual img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important}
+.hero-grid .blender-card>div:last-child{position:relative!important;display:block!important;flex:none!important;width:100%!important;height:auto!important;margin:0!important;padding:0 4px 10px!important;background:#171717!important;z-index:5!important}
+.hero-grid .blender-card strong,.hero-grid .blender-card small{position:relative!important;z-index:6!important}
+@media(max-width:800px){.hero-grid .blender-card .cognitive-visual{height:220px!important;min-height:220px!important}}
+@media(max-width:520px){.hero-grid .blender-card{gap:22px!important}.hero-grid .blender-card .cognitive-visual{height:190px!important;min-height:190px!important}}
