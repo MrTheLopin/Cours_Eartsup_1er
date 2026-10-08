@@ -26,3 +26,61 @@ main > .section{position:relative}main > .section + .section{border-top:1px soli
 .hero-grid .blender-card strong,.hero-grid .blender-card small{position:relative!important;z-index:6!important}
 @media(max-width:800px){.hero-grid .blender-card .cognitive-visual{height:220px!important;min-height:220px!important}}
 @media(max-width:520px){.hero-grid .blender-card{gap:22px!important}.hero-grid .blender-card .cognitive-visual{height:190px!important;min-height:190px!important}}
+
+/* Palette couleur globale — éléments importants et repères visuels */
+:root{
+  --accent:#f3eee4;
+  --accent-gold:#d8b36a;
+  --accent-blue:#8fb8d8;
+  --accent-green:#8fc7ae;
+  --accent-violet:#b7a0d8;
+  --accent-red:#d99191;
+}
+strong{color:#272727}
+.dark strong{color:#fff}
+section h3{color:#2b2926}
+.dark section h3{color:#fff}
+a{transition:color .2s ease,background .2s ease,border-color .2s ease}
+main a:not(.button):not(.course-card):not(.timetable-card){color:#8a6a2f;text-decoration-thickness:1px;text-underline-offset:3px}
+.dark a:not(.button):not(.course-card):not(.timetable-card){color:#e4c989}
+main a:not(.button):not(.course-card):not(.timetable-card):hover{color:#5d4620}
+.dark main a:not(.button):not(.course-card):not(.timetable-card):hover{color:#fff}
+.section-head>span{display:inline-block;padding:4px 8px;background:rgba(216,179,106,.16);border-left:3px solid var(--accent-gold);color:#8a6a2f}
+.dark .section-head>span{color:#e4c989;background:rgba(216,179,106,.12)}
+.card,.key-card,.resource-card,.blueprint-item,.unreal-stat,.exercise-card{border-top:2px solid rgba(216,179,106,.55)}
+.card .tag,.key-card h3,.resource-card h3{color:#8a6a2f}
+.dark .card .tag,.dark .key-card h3,.dark .resource-card h3{color:#e4c989}
+.important{border-left-color:var(--accent-gold);box-shadow:inset 4px 0 0 rgba(216,179,106,.12)}
+.warning{border-left-color:var(--accent-red)}
+.definition{border-left-color:var(--accent-blue);box-shadow:inset 4px 0 0 rgba(143,184,216,.12)}
+.highlight{background:#ead7a8}
+.mark{color:#9a742f}
+code,kbd{border-radius:3px}
+code{color:#8a6a2f}
+.dark code{color:#e4c989}
+kbd{box-shadow:0 2px 0 #b8b0a3}
+.dark kbd{background:#eee6d8;color:#171717;border-color:#d8d2c8}
+.naming-table th,.revision-table th{border-top:2px solid rgba(216,179,106,.5)}
+.naming-table td strong,.revision-table td strong{color:#d8b36a}
+.islands article:nth-child(1){border-top:3px solid var(--accent-blue)}
+.islands article:nth-child(2){border-top:3px solid var(--accent-green)}
+.islands article:nth-child(3){border-top:3px solid var(--accent-violet)}
+.islands article:nth-child(4){border-top:3px solid var(--accent-gold)}
+.shortcut kbd{border-top:2px solid var(--accent-gold)}
+.tips-grid>div:nth-child(4n+1){border-top-color:var(--accent-blue)}
+.tips-grid>div:nth-child(4n+2){border-top-color:var(--accent-green)}
+.tips-grid>div:nth-child(4n+3){border-top-color:var(--accent-violet)}
+.tips-grid>div:nth-child(4n+4){border-top-color:var(--accent-gold)}
+.course-sidebar-list a.active{background:#ead7a8}
+.course-sidebar-list a:hover{border-left-color:var(--accent-gold)}
+.timetable-card.production3d{box-shadow:inset 5px 0 0 #b66f4d}
+.timetable-card.unreal{box-shadow:inset 5px 0 0 #5d9d89}
+.timetable-card.production-image{box-shadow:inset 5px 0 0 #9c8b63}
+.timetable-card.volume{box-shadow:inset 5px 0 0 #9d8b68}
+.timetable-card.popculture{box-shadow:inset 5px 0 0 #6d9bbd}
+.timetable-card.presenter{box-shadow:inset 5px 0 0 #78a34e}
+.timetable-card.couleur{box-shadow:inset 5px 0 0 #5b9f91}
+.last-update::before{color:var(--accent-gold)}
+@media(max-width:520px){
+  .section-head>span{padding:3px 7px}
+}
