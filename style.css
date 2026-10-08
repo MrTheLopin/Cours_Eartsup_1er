@@ -84,3 +84,36 @@ kbd{box-shadow:0 2px 0 #b8b0a3}
 @media(max-width:520px){
   .section-head>span{padding:3px 7px}
 }
+
+/* Identité couleur par matière */
+body[class^="page-"]{--page-accent:#d8b36a;--page-soft:rgba(216,179,106,.14);--page-border:rgba(216,179,106,.58)}
+body.page-couleur{--page-accent:#64a99a;--page-soft:rgba(100,169,154,.14);--page-border:rgba(100,169,154,.6)}
+body.page-dessin{--page-accent:#c48772;--page-soft:rgba(196,135,114,.14);--page-border:rgba(196,135,114,.6)}
+body.page-game-design{--page-accent:#b18bd0;--page-soft:rgba(177,139,208,.14);--page-border:rgba(177,139,208,.6)}
+body.page-popculture{--page-accent:#6fa6ca;--page-soft:rgba(111,166,202,.14);--page-border:rgba(111,166,202,.6)}
+body.page-presenter{--page-accent:#8caf55;--page-soft:rgba(140,175,85,.14);--page-border:rgba(140,175,85,.6)}
+body.page-production3d{--page-accent:#c87952;--page-soft:rgba(200,121,82,.14);--page-border:rgba(200,121,82,.6)}
+body.page-production-image{--page-accent:#b29b6f;--page-soft:rgba(178,155,111,.14);--page-border:rgba(178,155,111,.6)}
+body.page-specialite-game{--page-accent:#d57c9a;--page-soft:rgba(213,124,154,.14);--page-border:rgba(213,124,154,.6)}
+body.page-studio-mobile{--page-accent:#70a7b8;--page-soft:rgba(112,167,184,.14);--page-border:rgba(112,167,184,.6)}
+body.page-studio-univers{--page-accent:#a28cce;--page-soft:rgba(162,140,206,.14);--page-border:rgba(162,140,206,.6)}
+body.page-unreal{--page-accent:#5fa68f;--page-soft:rgba(95,166,143,.14);--page-border:rgba(95,166,143,.6)}
+body.page-volume{--page-accent:#b99a68;--page-soft:rgba(185,154,104,.14);--page-border:rgba(185,154,104,.6)}
+body[class^="page-"] .hero{border-bottom:4px solid var(--page-accent)}
+body[class^="page-"] .eyebrow,body[class^="page-"] .section-head>span,body[class^="page-"] .card .tag,body[class^="page-"] .key-card h3,body[class^="page-"] .resource-card .tag{color:var(--page-accent)}
+body[class^="page-"] .section-head>span{background:var(--page-soft);border-left:3px solid var(--page-accent)}
+body[class^="page-"] .section-head::after,body[class^="page-"] .section + .section::before{background:var(--page-accent)}
+body[class^="page-"] .card,body[class^="page-"] .key-card,body[class^="page-"] .resource-card,body[class^="page-"] .blueprint-item,body[class^="page-"] .unreal-stat,body[class^="page-"] .exercise-card{border-top-color:var(--page-border)}
+body[class^="page-"] .important{border-left-color:var(--page-accent)}
+body[class^="page-"] .important::before{background:var(--page-accent)}
+body[class^="page-"] .highlight{background:var(--page-accent);color:#171717}
+body[class^="page-"] .mark,body[class^="page-"] code{color:var(--page-accent)}
+body[class^="page-"] .course-sidebar-title span{color:var(--page-accent)}
+body[class^="page-"] .course-sidebar-list a.active{background:var(--page-accent)}
+body[class^="page-"] .course-sidebar-list a:hover{border-left-color:var(--page-accent)}
+body[class^="page-"] .quick-sheet{border-left:4px solid var(--page-accent)}
+body[class^="page-"] .revision-table th{border-top:2px solid var(--page-border)}
+body[class^="page-"] .revision-table td strong{color:var(--page-accent)}
+body[class^="page-"] .exercise-button{background:var(--page-accent);border-color:var(--page-accent)}
+body[class^="page-"] .exercise-button.secondary{background:transparent;color:var(--page-accent)}
+body[class^="page-"] .exercise-button.secondary:hover{background:var(--page-accent);color:#171717}
